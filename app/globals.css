@@ -1,27 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap')
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* body
+{
+    --grid-color: rgba(0,0,0,var(--grid-opacity,0.5));
+    opacity: 1;
+    background-image: linear-gradient(var(--grid-color) .5px,transparent .5px),linear-gradient(to right,var(--grid-color) .5px,transparent .5px);
+    background-size: var(--grid-size,80px) var(--grid-size,80px);
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+} */
