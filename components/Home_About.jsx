@@ -7,7 +7,7 @@ const Home_About = () => {
             <span className='pr-2 text-3xl font-semibold text-black dark:text-white md:text-4xl'>👋 Hi, I'm Anurag!</span>    
         </button> 
         <div className='mt-10'>
-            <span className='text-xl md:text-xl text-emerald-500'>I am a 3rd yr. undergrad. at KNIT, Sultanpur.</span>
+            <span className='text-xl text-emerald-600 md:text-xl'>I am a 3rd yr. undergrad. at KNIT, Sultanpur.</span>
             <p className='mt-5 text-lg leading-8 first-letter:text-2xl'>
                Hello I'm Anurag Srivastav, a passionate Full Stack Developer hailing from Sultanpur, Uttar Pradesh, India. With over 2 years of hands-on experience in web development, I am a <span className='font-semibold text-zinc-700 dark:text-blue-300'>Full-stack developer</span> with specialization in both front-end and back-end technologies. My journey is marked by a strong command of 
                  <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100"><img className='w-4 h-4 mr-1' src="/images/js.png" alt="js"/><span>Javascript</span></button>, 

@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className='z-50 flex justify-between w-full py-1 mt-2 '>
        <div className='flex items-center'>
-           <a className='flex items-center font-sans text-xl font-bold text-black no-underline dark:text-zinc-300' href="/">@anurag</a>
+           <a className='flex items-center font-sans text-xl font-semibold no-underline text-zinc-700 dark:text-zinc-300' href="/">@anurag</a>
        </div>
        <div className='flex items-center gap-2 text-zinc-400'>
            <a href={socials.github} title='Github' target='blank'><GithubLogo size={25} className='text-zinc-600 dark:text-zinc-400' /></a>

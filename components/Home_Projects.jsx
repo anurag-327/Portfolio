@@ -4,9 +4,9 @@ function Project({data})
 {
     return(
         <li className=' w-[100%] dark:bg-zinc-800  mx-auto hover:bg-zinc-100 box-border px-4 py-2 dark:shadow-zinc-600  bg-white shadow-sm  shadow-zinc-400 rounded-xl md:w-[300px]'>
-        <a href={data.link} className='text-black no-underline border dark:text-white'>
+        <a href={data.link} className='no-underline border text-zinc-700 dark:text-white'>
             <div className='flex items-center gap-2'>
-                <img className='w-8 h-10 px-2 rounded-md dark:bg-green-300' src={data.image.src} alt={data.name}/>
+                <img className='w-8 h-10 px-2 rounded-md dark:bg-green-300' src={data.logo.src} alt={data.name}/>
                 <p className='text-xl '>{data.name}</p>
             </div>
             <p className='mt-2 whitespace-pre-wrap'>
