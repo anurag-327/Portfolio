@@ -3,7 +3,9 @@ export const socials={
     linkedin: "https://www.linkedin.com/in/anuragsr327",
     twitter: "https://twitter.com/itsAnurag_sri",
     resume: "https://drive.google.com/file/d/1aSjBAzQjDKjuZcIXPm3Ivly2vMbuFVR1/view?usp=sharing",
-    instagram: "#"
+    instagram: "#",
+    codechef:"https://www.codechef.com/users/anurag_cp273",
+    leetcode:"https://leetcode.com/Anurag_sr/"
 }
 import hackfinder_logo from "../public/projects/hackfinder_logo.svg"
 import quicksign_logo from "../public/projects/quicksign_logo.svg"
@@ -21,21 +23,23 @@ export const projects=[
         id:1,
         name:"Quick Sign",
         description:"Streamlined OAuth Provider for signup across platforms, offering a smooth user experience.",
-        toolsused:"React, Express js, Node Js, MongoDB",
+        toolsused:"React, Express js, Node Js and MongoDB",
         logo:quicksign_logo,
         image:quicksign,
         code:"https://github.com/anurag-327/QuickSign",
-        link:"https://quick-sign.vercel.app"
+        link:"https://quick-sign.vercel.app",
+        points:["Discovered and engaged in hackathon events using Next.js and Supabase.s","Efficiently handled user authentication with Node.js and Express.js .","Integrated user state management for seamless navigation and interaction."]
     },
     {
         id:2,
         name:"Codemon",
         description:"A web-based IDE for compiling CPP codes and solving DSA problems.",
-        toolsused:"HTML, CSS, JS, EJS, Express js, MongoDB",
+        toolsused:"Next JS, Zustand, Express js and MongoDB",
         logo:codemon_logo,
         image:codemon,
         code:"https://github.com/anurag-327/Codemon",
-        link:""
+        link:"",
+        points:["Developed a versatile web-based IDE for running CPP codes, DSA problem-solving, and debugging.","Managed complete state of the app with Zustand library","Constructed APIs using Express.js, Node.js, and MongoDB to facilitate code execution and management."]
     },
     {
         id:3,
@@ -45,7 +49,8 @@ export const projects=[
         logo:vault_logo,
         image:vault,
         code:"https://github.com/anurag-327/PasswordManager",
-        link:"https://my-vault-pm.vercel.app"
+        link:"https://my-vault-pm.vercel.app",
+        points:["Handled authentication and storage for the app with Appwrite Cloud services","Managed user data and app data with Zustand","Used Tailwind CSS and radix UI for accessible and configurable components."]
     },
     {
         id:4,
@@ -55,17 +60,19 @@ export const projects=[
         logo:hackfinder_logo,
         image:hackfinder,
         code:"https://github.com/anurag-327/hackfinder",
-        link:"https://hackfinder.vercel.app/"
+        link:"https://hackfinder.vercel.app/",
+        points:[]
     },
     {
         id:5,
         name:"Pint",
-        description:`Customize images for Twitter, providing a seamless platform for enhancing visual content.`,
+        description:`n app that frames the screenshots inside a beautiful gradient pattern.`,
         toolsused:"Next JS, Tailwind CSS, appwrite",
         logo:pint_logo,
         image:pint,
         code:"https://github.com/anurag-327/hackfinder",
-        link:"https://pint-blue.vercel.app/"
+        link:"https://pint-blue.vercel.app/",
+        points:["Securedly stored and managed credentials with strong encryption methods.","Safeguarded sensitive information, ensuring data protection and security.","Ensured data security and user data protection through robust encryption methods."]
     },
     {
         id:5,
@@ -75,7 +82,8 @@ export const projects=[
         logo:"",
         image:"",
         code:"https://github.com/anurag-327/Chat-App",
-        link:""
+        link:"",
+        points:[]
     },
     {
         id:6,
@@ -85,7 +93,8 @@ export const projects=[
         logo:"",
         image:"",
         code:"https://github.com/anurag-327/E-Commerce",
-        link:""
+        link:"",
+        points:[]
     },
     {
         id:6,
@@ -95,7 +104,8 @@ export const projects=[
         logo:"",
         image:"",
         code:"https://github.com/anurag-327/Car-Rental-System",
-        link:""
+        link:"",
+        points:[]
     },
     {
         id:8,
@@ -105,7 +115,8 @@ export const projects=[
         logo:"",
         image:"",
         code:"https://github.com/anurag-327/Google-Keep-Notes",
-        link:""
+        link:"",
+        points:[]
     },
     {
         id:10,
@@ -115,7 +126,8 @@ export const projects=[
         logo:"",
         image:"",
         code:"https://github.com/anurag-327/Netflix-UI-clone",
-        link:""
+        link:"",
+        points:[]
     },
     {
         id:4,
@@ -125,6 +137,7 @@ export const projects=[
         logo:"",
         image:"",
         code:"https://github.com/anurag-327/Imghost",
-        link:""
+        link:"",
+        points:[]
     }
 ]
