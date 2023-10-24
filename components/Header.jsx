@@ -3,9 +3,9 @@ import { GithubLogo,At,TwitterLogo,LinkedinLogo,ReadCvLogo } from '@phosphor-ico
 import { socials } from '@/data/data'
 const Header = () => {
   return (
-    <header className='z-50 flex justify-between w-full px-2 py-1 mt-2 md:mt-5 '>
+    <header className='z-50 flex justify-between w-full py-1 mt-2 '>
        <div className='flex items-center'>
-           <a className='flex items-center font-sans font-bold text-black no-underline dark:text-zinc-300' href="/">@anurag</a>
+           <a className='flex items-center font-sans text-xl font-bold text-black no-underline dark:text-zinc-300' href="/">@anurag</a>
        </div>
        <div className='flex items-center gap-2 text-zinc-400'>
            <a href={socials.github} title='Github' target='blank'><GithubLogo size={25} className='text-zinc-600 dark:text-zinc-400' /></a>
