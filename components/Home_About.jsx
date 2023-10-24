@@ -3,7 +3,7 @@ import { ArrowLineUpRight, ReadCvLogo } from '@phosphor-icons/react'
 const Home_About = () => {
   return (
     <div className='mt-12'>
-        <button className='px-4 py-3 border-t-2 border-b-8 border-black shadow-sm dark:border-emerald-300 border-x-2 w-fit shadow-black bg-emerald-300 dark:bg-zinc-700 dark:text-white rounded-2xl'>
+        <button className='w-full px-4 py-3 border-t-2 border-b-8 border-black shadow-sm md:w-fit dark:border-emerald-300 border-x-2 shadow-black bg-emerald-300 dark:bg-zinc-700 dark:text-white rounded-2xl'>
             <span className='pr-2 text-2xl font-semibold text-black dark:text-white md:text-3xl'>👋 Hi, I'm Anurag!</span>    
         </button> 
         <div className='mt-10'>
