@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Skills = () => {
+const Home_Skills = () => {
   return (
     <div>
       <h2 className='font-bold text-violet-700 dark:text-violet-400'># Skills</h2>
       <div className='flex flex-col gap-6 md:gap-4'>
-        <div className='flex gap-4'>
+        <div className='flex flex-col gap-4 md:flex-row'>
           <div className='font-semibold'>Languages:</div>
           <div className='flex flex-wrap gap-1'>
               <button className="inline-flex items-center px-3 py-1 mx-1 text-sm leading-4 border border-gray-300 rounded-full dark:border-gray-100 bg-zinc-100 dark:bg-zinc-200 text-neutral-900 dark:text-neutral-700"><span>CPP</span></button>
@@ -15,7 +15,7 @@ const Skills = () => {
           </div>
         </div>
         
-        <div className='flex gap-4'>
+        <div className='flex flex-col gap-4 md:flex-row'>
           <div className='font-semibold'>Frameworks:</div>
           <div className='flex flex-wrap gap-1'>
               <button className="inline-flex items-center px-3 py-1 mx-1 text-sm leading-4 border border-gray-300 rounded-full dark:border-gray-100 bg-zinc-100 dark:bg-zinc-200 text-neutral-900 dark:text-neutral-700"><img className='w-4 h-4 mr-1' src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/reactjs.svg" alt="js"/><span>React</span></button>
@@ -25,7 +25,7 @@ const Skills = () => {
           </div>
         </div>
         
-        <div className='flex gap-4'>
+        <div className='flex flex-col gap-4 md:flex-row'>
           <div className='font-semibold'>Libraries:</div>
           <div className='flex flex-wrap gap-1'>
               <button className="inline-flex items-center px-3 py-1 mx-1 text-sm leading-4 border border-gray-300 rounded-full dark:border-gray-100 bg-zinc-100 dark:bg-zinc-200 text-neutral-900 dark:text-neutral-700"><span>Tailwind CSS</span></button>
@@ -36,7 +36,7 @@ const Skills = () => {
           </div>
         </div>
 
-        <div className='flex gap-4'>
+        <div className='flex flex-col gap-4 md:flex-row'>
           <div className='font-semibold'>Database:</div>
           <div className='flex flex-wrap gap-1'>
               <button className="inline-flex items-center px-3 py-1 mx-1 text-sm leading-4 border border-gray-300 rounded-full dark:border-gray-100 bg-zinc-100 dark:bg-zinc-200 text-neutral-900 dark:text-neutral-700"><span>MongoDB</span></button>
@@ -44,7 +44,7 @@ const Skills = () => {
           </div>
         </div>
         
-        <div className='flex gap-4'>
+        <div className='flex flex-col gap-4 md:flex-row'>
           <div className='font-semibold'>Dev Tools:</div>
           <div className='flex flex-wrap gap-1'>
               <button className="inline-flex items-center px-3 py-1 mx-1 text-sm leading-4 border border-gray-300 rounded-full dark:border-gray-100 bg-zinc-100 dark:bg-zinc-200 text-neutral-900 dark:text-neutral-700"><span>Git</span></button>
@@ -55,7 +55,7 @@ const Skills = () => {
           </div>
         </div>
 
-        <div className='flex gap-4'>
+        <div className='flex flex-col gap-4 md:flex-row'>
           <div className='font-semibold'>Others:</div>
           <div className='flex flex-wrap gap-1'>
               <button className="inline-flex items-center px-3 py-1 mx-1 text-sm leading-4 border border-gray-300 rounded-full dark:border-gray-100 bg-zinc-100 dark:bg-zinc-200 text-neutral-900 dark:text-neutral-700"><span>Rest API's</span></button>
@@ -70,4 +70,4 @@ const Skills = () => {
   )
 }
 
-export default Skills
+export default Home_Skills

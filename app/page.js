@@ -4,7 +4,7 @@ import Header from '@/components/Header'
 import Home_About from '@/components/Home_About'
 import Home_Projects from '@/components/Home_Projects'
 import Navigation from '@/components/Navigation'
-import Skills from '@/components/Skills'
+import Home_Skills from '@/components/Home_Skills'
 import Image from 'next/image'
 
 
@@ -17,7 +17,7 @@ export default function Home() {
             <Navigation active="home" />
             <Home_About />
             <hr className='w-[90%] mx-auto h-px mt-10 mb-5 rounded-full bg-zinc-300'></hr>
-            <Skills />
+            <Home_Skills />
             <Home_Projects />
             <Footer />
          </div>
