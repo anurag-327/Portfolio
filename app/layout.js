@@ -1,4 +1,5 @@
 import './globals.css'
+import './app.css'
 import { Inter,Montserrat, Poppins } from 'next/font/google'
 
 const font = Poppins({ subsets: ['latin'], weight:['100','200','300','400','500'] })
@@ -11,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${font.className} m-0 p-0 `}>{children}</body>
+      <body className={`${font.className} bg-grid [--grid-opacity:0.08] scroll-smooth [--grid-size:100px]  m-0 p-0  `}>{children}</body>
     </html>
   )
 }

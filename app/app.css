@@ -1,0 +1,8 @@
+
+
+.bg-grid {
+    --grid-color: rgba(0,0,0,var(--grid-opacity,0.5));
+    opacity: 1;
+    background-image: linear-gradient(var(--grid-color) .5px,transparent .5px),linear-gradient(to right,var(--grid-color) .5px,transparent .5px);
+    background-size: var(--grid-size,80px) var(--grid-size,80px);
+    }
