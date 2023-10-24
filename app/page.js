@@ -6,6 +6,7 @@ import Home_Projects from '@/components/Home_Projects'
 import Navigation from '@/components/Navigation'
 import Home_Skills from '@/components/Home_Skills'
 import Image from 'next/image'
+import Contact from '@/components/Contact'
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
             <hr className='w-[90%] mx-auto h-px mt-10 mb-5 rounded-full bg-zinc-300'></hr>
             <Home_Skills />
             <Home_Projects />
+            <Contact />
             <Footer />
          </div>
       </main>

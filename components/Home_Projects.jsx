@@ -27,7 +27,7 @@ const Home_Projects = () => {
                     projectsList.map((data,index) => <Project key={index} data={data} /> )
                 }
              </ul>
-             <a href="/projects" className='float-right'>View all projects </a>
+             <a href="/projects" className='float-right text-lg text-blue-600'>View all projects </a>
          </div>
     </div>
   )
