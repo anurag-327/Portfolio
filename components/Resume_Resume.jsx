@@ -90,9 +90,6 @@ function Skills() {
 		"Postman",
 		"Git",
 		"Github",
-        "supabase",
-        "firebase",
-        "appwrite",
 		"DSA",
 	];
 	return (
@@ -145,7 +142,9 @@ function Projects() {
             toolsused:"React, Express js, Node Js and MongoDB",
             code:"https://github.com/anurag-327/QuickSign",
             link:"https://quick-sign.vercel.app",
-            points:["Discovered and engaged in hackathon events using Next.js and Supabase.s","Efficiently handled user authentication with Node.js and Express.js .","Integrated user state management for seamless navigation and interaction."]
+            points:["Implemented secured authentication and authorization using json web tokens",
+				"Crafted a robust and stable API in express",
+				"Used react, tailwind css for frontend and contextAPI for efficient state managemen"],
         },
         {
             id:2,
@@ -163,8 +162,8 @@ function Projects() {
             toolsused:"React, Express js, Node Js and MongoDB",
             code:"https://github.com/anurag-327/PasswordManager",
             link:"https://my-vault-pm.vercel.app",
-            points:["Handled authentication and storage for the app with Appwrite Cloud services","Managed user data and app data with Zustand","Used Tailwind CSS and radix UI for accessible and configurable components."]
-        },
+			points:["Securedly stored and managed credentials with strong encryption methods.","Safeguarded sensitive information, ensuring data protection and security.","Ensured data security and user data protection through robust encryption methods."]
+		},
         {
             id:5,
             name:"Pint",
@@ -172,7 +171,7 @@ function Projects() {
             toolsused:"Next JS, Tailwind CSS and appwrite",
             code:"https://github.com/anurag-327/hackfinder",
             link:"https://pint-blue.vercel.app/",
-            points:["Securedly stored and managed credentials with strong encryption methods.","Safeguarded sensitive information, ensuring data protection and security.","Ensured data security and user data protection through robust encryption methods."]
+            points:["Handled authentication and storage for the app with Appwrite Cloud services","Managed user data and app data with Zustand","Used Tailwind CSS and radix UI for accessible and configurable components."]
         }]
 
 	return (
