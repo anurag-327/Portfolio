@@ -32,7 +32,7 @@ function Education() {
 						</span>
 						<span className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
 							<p>2021-2025</p>
-							<p>CGPA: 8.8/10</p>
+							<p className="-mt-3 md:mt-3">CGPA: 8.8/10</p>
 						</span>
 					</div>
 				</li>
@@ -42,7 +42,7 @@ function Education() {
 						<span>Aditya Birla Public School</span>
 						<span className="flex flex-col items-start justify-between sm:flex-row sm:items-center">
 							<p>2018-2020</p>
-							<p>93.2%</p>
+							<p className="-mt-3 md:mt-3">93.2%</p>
 						</span>
 					</div>
 				</li>
@@ -114,12 +114,12 @@ function Card({data})
         <li>
             <div className="flex flex-col gap-1 items-left">
                 <h3>
-                    <a href="https://quick-sign.vercel.app/" className="no-underline text-zinc-600 ">
+                    <a href="https://quick-sign.vercel.app/" className="underline text-zinc-600 ">
                         {data.name}
                     </a>
                 </h3>
-                <p className="-mt-4">
-                    {data.toolsused}
+                <p className="-mt-3 font-medium text-blue-600">
+                    <span className="font-semibold text-black">Tools : </span>{data.toolsused}
                 </p>
                 <span className="-mt-2">
                     {data.description}
