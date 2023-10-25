@@ -2,8 +2,7 @@ import './globals.css'
 import './app.css'
 import { Inter,Montserrat, Poppins } from 'next/font/google'
 
-const font = Poppins({ subsets: ['latin'], weight:['100','200','300','400','500'] })
-
+const font = Poppins({ subsets: ['latin-ext'], weight:['100','200','300','400','500'] })
 export const metadata = {
   title: 'Anurag Srivastav',
   description: 'Portfolio created with create next app',

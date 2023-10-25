@@ -7,7 +7,7 @@ function Project({data})
         <li className=' w-[100%]  dark:bg-zinc-800  mx-auto hover:bg-zinc-100 box-border px-4 py-2 dark:shadow-zinc-600  bg-white shadow-sm  shadow-zinc-400 rounded-xl '>
         <div className='no-underline border text-zinc-700 dark:text-white'>
             <div>
-            <img className='w-full px-2 mt-4 rounded dark:bg-green-300' src={data.image.src} alt={data.name}/>
+            <img className='w-full px-2 mt-4 rounded-md dark:bg-green-300' src={data.image.src} alt={data.name}/>
             </div>
             <div className='flex items-center justify-center w-full gap-2'>
                 <img className='w-8 h-10 px-2 rounded-md dark:bg-green-300' src={data.logo.src} alt={data.name}/>

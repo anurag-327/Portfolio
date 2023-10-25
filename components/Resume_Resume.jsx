@@ -168,7 +168,7 @@ function Projects() {
         {
             id:5,
             name:"Pint",
-            description:`n app that frames the screenshots inside a beautiful gradient pattern.`,
+            description:`An app that frames the screenshots inside a beautiful gradient pattern.`,
             toolsused:"Next JS, Tailwind CSS and appwrite",
             code:"https://github.com/anurag-327/hackfinder",
             link:"https://pint-blue.vercel.app/",
