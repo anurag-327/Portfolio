@@ -1,6 +1,6 @@
 import { socials,projects } from "@/data/data";
 import { GithubLogo,At,TwitterLogo,LinkedinLogo,ReadCvLogo } from '@phosphor-icons/react/dist/ssr'
-
+import {Socicons} from "socicons"
 function Header()
 {
     return (
@@ -155,14 +155,14 @@ function Projects() {
             link:"",
             points:["Developed a versatile web-based IDE for running CPP codes, DSA problem-solving, and debugging.","Managed complete state of the app with Zustand library","Constructed APIs using Express.js, Node.js, and MongoDB to facilitate code execution and management."]
         },
-        {
-            id:3,
-            name:"Vault",
-            description:"A secure credential storage solution ensuring your sensitive data is safeguarded with robust encryption.",
-            toolsused:"React, Express js, Node Js and MongoDB",
-            code:"https://github.com/anurag-327/PasswordManager",
-            link:"https://my-vault-pm.vercel.app",
-			points:["Securedly stored and managed credentials with strong encryption methods.","Safeguarded sensitive information, ensuring data protection and security.","Ensured data security and user data protection through robust encryption methods."]
+		{
+			id:3,
+			name:"Socions",
+			description:"An icon generating library for genrating icons of brands and tech stacks. ",
+			toolsused:"Svg, npm package, esbuild, javascript",
+			code:"https://github.com/anurag-327/socions",
+			link:"https://www.npmjs.com/package/socicons",
+			points:["Created Socions, an icon library featuring logos of well-known brands, social media platforms, and popular tech stacks","Diverse icon support, including social media (e.g., Facebook, Twitter) and tech stacks (e.g., JavaScript, Python)","User-friendly design for seamless icon integration in web and mobile apps"]
 		},
         {
             id:5,
@@ -172,7 +172,17 @@ function Projects() {
             code:"https://github.com/anurag-327/hackfinder",
             link:"https://pint-blue.vercel.app/",
             points:["Handled authentication and storage for the app with Appwrite Cloud services","Managed user data and app data with Zustand","Used Tailwind CSS and radix UI for accessible and configurable components."]
-        }]
+        },
+		{
+            id:3,
+            name:"Vault",
+            description:"A secure credential storage solution ensuring your sensitive data is safeguarded with robust encryption.",
+            toolsused:"React, Express js, Node Js and MongoDB",
+            code:"https://github.com/anurag-327/PasswordManager",
+            link:"https://my-vault-pm.vercel.app",
+			points:["Securedly stored and managed credentials with strong encryption methods.","Safeguarded sensitive information, ensuring data protection and security.","Ensured data security and user data protection through robust encryption methods."]
+		},
+	]
 
 	return (
 		<>

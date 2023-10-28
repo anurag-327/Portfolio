@@ -7,7 +7,7 @@ function Project({data})
         <li className=' w-[100%]  dark:bg-zinc-800  mx-auto hover:bg-zinc-100 box-border px-4 py-2 dark:shadow-zinc-600  bg-white shadow-sm  shadow-zinc-400 rounded-xl '>
         <div className='no-underline border text-zinc-700 dark:text-white'>
             <div>
-            <img className='w-full px-2 mt-4 rounded-md dark:bg-green-300' src={data.image.src} alt={data.name}/>
+            <img className='w-full mx-auto mt-4 rounded-md dark:bg-green-300' src={data.image.src} alt={data.name}/>
             </div>
             <div className='flex items-center justify-center w-full gap-2'>
                 <img className='w-8 h-10 px-2 rounded-md dark:bg-green-300' src={data.logo.src} alt={data.name}/>
@@ -28,8 +28,8 @@ function Project({data})
     )
 }
 const Projects_Projects = () => {
-    const projectsdisplay=projects.slice(0,5);
-    const otherprojects=projects.slice(5,projects.length)
+    const projectsdisplay=projects.slice(0,6);
+    const otherprojects=projects.slice(6,projects.length)
   return (
     <div>
         <div className='w-full mt-10'>

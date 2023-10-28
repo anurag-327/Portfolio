@@ -2,7 +2,7 @@ export const socials={
     github: "https://github.com/anurag-327",
     linkedin: "https://www.linkedin.com/in/anuragsr327",
     twitter: "https://twitter.com/itsAnurag_sri",
-    resume: "https://drive.google.com/file/d/1aSjBAzQjDKjuZcIXPm3Ivly2vMbuFVR1/view?usp=sharing",
+    resume: "https://drive.google.com/file/d/1619EX60ku3hoFsPP0AVt2eExTPl2z0Bq/view?usp=sharing",
     instagram: "#",
     codechef:"https://www.codechef.com/users/anurag_cp273",
     leetcode:"https://leetcode.com/Anurag_sr/"
@@ -12,11 +12,13 @@ import quicksign_logo from "../public/projects/quicksign_logo.svg"
 import codemon_logo from "../public/projects/codemon_logo.svg"
 import vault_logo from "../public/projects/vault_logo.svg"
 import pint_logo from "../public/projects/pint_logo.svg"
+import socicons_logo from "../public/projects/socicons_logo.svg"
 import quicksign from "../public/projectimages/quicksign.png"
-import codemon from "../public/projectimages/codemon.png"
+import codemon from "../public/projectimages/codemon3.png"
 import hackfinder from "../public/projectimages/hackfinder.png"
 import vault from "../public/projectimages/vault.png"
 import pint from "../public/projectimages/pint.png"
+import socicons from "../public/projectimages/socicons.png"
 export const projects=[
   
     {
@@ -43,6 +45,17 @@ export const projects=[
     },
     {
         id:3,
+        name:"Socions",
+        description:"An icon generating library for genrating icons of brands and tech stacks. ",
+        toolsused:"Svg, npm package, esbuild, javascript",
+        logo:socicons_logo,
+        image:socicons,
+        code:"https://github.com/anurag-327/socions",
+        link:"https://www.npmjs.com/package/socicons",
+        points:["Created Socions, an icon library featuring logos of well-known brands, social media platforms, and popular tech stacks","Diverse icon support, including social media (e.g., Facebook, Twitter) and tech stacks (e.g., JavaScript, Python)","User-friendly design for seamless icon integration in web and mobile apps"]
+    },
+    {
+        id:3,
         name:"Vault",
         description:"A secure credential storage solution ensuring your sensitive data is safeguarded with robust encryption.",
         toolsused:"React, Express js, Node Js, MongoDB",
@@ -51,17 +64,6 @@ export const projects=[
         code:"https://github.com/anurag-327/PasswordManager",
         link:"https://my-vault-pm.vercel.app",
         points:["Handled authentication and storage for the app with Appwrite Cloud services","Managed user data and app data with Zustand","Used Tailwind CSS and radix UI for accessible and configurable components."]
-    },
-    {
-        id:4,
-        name:"Hack Finder",
-        description:`Discover and engage in hackathon events, fostering a user-friendly experience for enthusiasts`,
-        toolsused:"Next JS, Tailwind CSS, supabase",
-        logo:hackfinder_logo,
-        image:hackfinder,
-        code:"https://github.com/anurag-327/hackfinder",
-        link:"https://hackfinder.vercel.app/",
-        points:[]
     },
     {
         id:5,
@@ -73,6 +75,17 @@ export const projects=[
         code:"https://github.com/anurag-327/hackfinder",
         link:"https://pint-blue.vercel.app/",
         points:["Securedly stored and managed credentials with strong encryption methods.","Safeguarded sensitive information, ensuring data protection and security.","Ensured data security and user data protection through robust encryption methods."]
+    },
+    {
+        id:4,
+        name:"Hack Finder",
+        description:`Discover and engage in hackathon events, fostering a user-friendly experience for enthusiasts`,
+        toolsused:"Next JS, Tailwind CSS, supabase",
+        logo:hackfinder_logo,
+        image:hackfinder,
+        code:"https://github.com/anurag-327/hackfinder",
+        link:"https://hackfinder.vercel.app/",
+        points:[]
     },
     {
         id:5,
