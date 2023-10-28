@@ -111,7 +111,7 @@ function Card({data})
         <li>
             <div className="flex flex-col gap-1 items-left">
                 <h3>
-                    <a href="https://quick-sign.vercel.app/" className="underline text-zinc-600 ">
+                    <a href={data.link} className="underline text-zinc-600 ">
                         {data.name}
                     </a>
                 </h3>
