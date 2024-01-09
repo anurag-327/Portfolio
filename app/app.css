@@ -6,3 +6,33 @@
     background-image: linear-gradient(var(--grid-color) .5px,transparent .5px),linear-gradient(to right,var(--grid-color) .5px,transparent .5px);
     background-size: var(--grid-size,80px) var(--grid-size,80px);
     }
+
+.border-project{
+    border: 1px solid  rgb(209 213 219);
+}  
+.border-dark{
+    border:2px solid rgb(31 41 55)
+}  
+.border-skills
+{
+    border:1px solid  rgba(156, 163, 175, 0.347);
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-20deg); }
+    50% { transform: rotate(20deg); }
+    75% { transform: rotate(-20deg); }
+    100% { transform: rotate(20deg); }
+  }
+  
+  .hand {
+    display: inline-block;
+    font-size: 40px; /* Adjust the font size as needed */
+    animation: shake 2s ease infinite; /* Adjust the duration and timing function as needed */
+  }
+
+.border-mail
+{
+    border:2px solid rgba(128, 128, 128, 0.425);
+}

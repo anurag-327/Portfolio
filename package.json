@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.13",
-    "autoprefixer": "10.4.16",
+    "autoprefixer": "^10.4.16",
     "next": "13.5.4",
     "postcss": "8.4.31",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "socicons": "^1.0.7",
-    "tailwindcss": "3.3.3"
+    "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10"
