@@ -8,7 +8,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 function Project({ data }) {
   return (
-    <li className=" w-[100%] box-border hover:shadow-lg shadow-md dark:bg-zinc-900 border-project   mx-auto hover:bg-gray-50  px-4 py-3 dark:border-dark bg-white rounded-xl md:w-[90%] transition duration-300">
+    <li className=" w-[100%] box-border hover:shadow-xl shadow-md dark:bg-zinc-900 border-project   mx-auto hover:bg-gray-50  px-4 py-3 dark:border-dark bg-white rounded-xl md:w-[90%] transition duration-300">
       <div className="flex flex-col no-underline text-zinc-700 dark:text-white">
         <div className="flex items-center">
           {/* <img
@@ -68,7 +68,7 @@ const Home_Projects = () => {
         </div>
         <a
           href="/projects"
-          className="float-right mt-2 text-blue-600 underline  md:mr-8"
+          className="float-right mt-2 text-blue-600 underline md:mr-8"
         >
           View all projects {">"}
         </a>

@@ -14,41 +14,56 @@ const Contact = () => {
       <h2 className="font-bold text-violet-700 dark:text-violet-400">
         # Contact me
       </h2>
-      <div className="flex flex-row flex-wrap gap-2">
+      <p className="text-sm md:text-lg font-[450]">
+        Have a question or just want to say hello👋? I'm always open for a chat.
+        Feel free to reach out through any of the channels below:
+      </p>
+      <div className="flex flex-row flex-wrap justify-center gap-2">
         <a
-          className="flex gap-2 p-2 no-underline bh-while (condition) {
-            
-          } rounded-md w-fit border-mail text-zinc-700 item-center"
+          className="flex w-6 h-6 gap-2 p-2 no-underline rounded-full md:w-8 md:h-8 md:p-2 border-contact text-zinc-700 item-center"
+          href="https://leetcode.com/anuragSri327/"
+        >
+          <img
+            src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-level-up-your-coding-skills-and-quickly-land-a-job-logo-color-tal-revivo.png"
+            className="transition duration-1000 transform logo "
+          />
+        </a>
+        <a
+          className="flex w-6 h-6 gap-2 p-2 no-underline rounded-full md:w-8 md:h-8 md:p-2 border-contact text-zinc-700 item-center"
           href="https://github.com/anurag-327"
         >
-          <GithubLogo className="" size={25} />
-          <span className="text-zinc-600 ">anurag-327</span>
+          <img
+            src="https://img.icons8.com/ios-filled/50/github.png"
+            className="transition duration-1000 transform logo "
+          />
         </a>
         <a
-          className="flex gap-2 p-2 no-underline bh-while (condition) {
-            
-          } rounded-md w-fit border-mail text-zinc-700 item-center"
+          className="flex w-6 h-6 gap-2 p-2 no-underline rounded-full md:w-8 md:h-8 md:p-2 border-contact text-zinc-700 item-center"
           href="https://www.linkedin.com/in/anuragsr327"
         >
-          <LinkedinLogo className="" size={25} />
-          <span className="text-zinc-600 ">anuragsr327</span>
+          <img
+            src="https://img.icons8.com/fluency/48/linkedin.png"
+            className="transition duration-1000 transform logo "
+          />
         </a>
         <a
-          className="flex gap-2 p-2 no-underline bg-white rounded-md w-fit border-mail text-zinc-700 item-center"
+          className="flex w-6 h-6 gap-2 p-2 no-underline bg-white rounded-full md:w-8 md:h-8 md:p-2 border-contact text-zinc-700 item-center"
           href="https://twitter.com/itsAnurag_sri"
         >
-          <TwitterLogo className="" size={25} />
-          <span className="text-zinc-600 ">itsAnurag_Sri</span>
+          <img
+            src="https://img.icons8.com/color/48/twitter--v1.png"
+            className="transition duration-1000 transform logo "
+          />
         </a>
 
         <a
-          className="flex gap-2 p-2 no-underline bh-while (condition) {
-            
-          } rounded-md w-fit border-mail text-zinc-700 item-center"
+          className="flex w-6 h-6 gap-2 p-2 no-underline bg-white rounded-full md:w-8 md:h-8 bg-gradient-to-r from-blue-500 to-orange-400 md:p-2 border-contact text-zinc-700 item-center"
           href="mailto:anuragsrivastav0027@gmail.com"
         >
-          <EnvelopeOpen className="" size={25} />
-          <span className="text-zinc-600 ">anuragsrivastav0027@gmail.com</span>
+          <img
+            src="https://img.icons8.com/color/48/gmail-new.png"
+            className="transition duration-1000 transform logo "
+          />
         </a>
       </div>
     </div>

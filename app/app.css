@@ -36,3 +36,11 @@
 {
     border:2px solid rgba(128, 128, 128, 0.425);
 }
+.border-contact
+{
+    border:2px solid rgba(24, 13, 182, 0.514);
+}
+.border-contact:hover img 
+{
+    transform: rotate(360deg);
+}
