@@ -24,7 +24,7 @@ export default function Home() {
         }),
       };
       const res = await fetch(
-        "https://logger-mocha-six.vercel.app/api/logger",
+        "https://logger-mocha-six.vercel.app/api/logger/v1",
         body
       );
       const json = await res.json();
