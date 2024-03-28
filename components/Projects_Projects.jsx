@@ -3,11 +3,11 @@ import { projects } from "@/data/data";
 import { GithubLogo, RocketLaunch } from "@phosphor-icons/react/dist/ssr";
 function Project({ data }) {
   return (
-    <li className=" w-[100%]  dark:bg-zinc-800  mx-auto hover:bg-zinc-100 box-border px-4 py-2 dark:shadow-zinc-600  bg-white shadow-sm  shadow-zinc-400 rounded-xl ">
+    <li className=" w-[100%]  dark:bg-zinc-900 dark:border-gray-600 dark:border  mx-auto hover:bg-zinc-100 box-border px-4 py-2   bg-white shadow-sm dark:shadow-none  shadow-zinc-400 rounded-xl ">
       <div className="no-underline border text-zinc-700 dark:text-white">
         <div>
           <img
-            className="w-full mx-auto mt-4 rounded-md dark:bg-green-300"
+            className="w-full mx-auto mt-4 rounded-md"
             src={data.image.src}
             alt={data.name}
             loading="lazy"
@@ -60,11 +60,11 @@ const Projects_Projects = () => {
         </ul>
       </div>
       <div className="mt-8">
-        <h2 className="text-blue-600"># Other Projects</h2>
+        <h2 className="text-blue-600 dark:text-white"># Other Projects</h2>
         <ul>
           {otherprojects.map((data, index) => (
             <li key={index}>
-              <a className="text-blue-600" href={data.code}>
+              <a className="text-blue-600 dark:text-blue-300" href={data.code}>
                 {data.name}
               </a>
             </li>

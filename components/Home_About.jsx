@@ -3,11 +3,11 @@ import { ArrowLineUpRight, ReadCvLogo } from "@phosphor-icons/react/dist/ssr";
 const Home_About = () => {
   return (
     <div className="mt-12 ">
-      <button className="w-full px-4 py-4 border-t-2 border-b-8 border-black shadow-sm hand-out group md:w-fit dark:border-emerald-300 border-x-2 shadow-black bg-emerald-300 dark:bg-zinc-700 dark:text-white rounded-2xl">
+      <div className="w-full px-4 py-4 border-t-2 border-b-8 border-black shadow-sm bg-emerald-300 landingbutton hand-out group md:w-fit dark:border-gray-600 border-x-2 shadow-black dark:bg-zinc-900 dark:text-white rounded-2xl">
         <span className="pr-2 text-3xl font-bold text-black dark:text-white md:text-4xl">
           <span className="hand ">👋</span> Hi, I'm Anurag!
         </span>
-      </button>
+      </div>
       <div className="flex flex-col mt-10">
         <span className=" text-emerald-800 first-letter:text-2xl dark:text-emerald-100 text-lg font-[500]">
           <span className="text-2xl">🧑‍🎓</span> I am a 3rd yr. undergrad. at
@@ -17,27 +17,27 @@ const Home_About = () => {
           Hello I'm Anurag Srivastav, a passionate Full Stack Developer hailing
           from Sultanpur, Uttar Pradesh, India. With over 2 years of hands-on
           experience in web development. I am a{" "}
-          <span className="font-semibold text-zinc-600 dark:text-blue-300">
+          <span className="font-semibold text-zinc-600 dark:text-blue-400">
             Full-stack developer
           </span>{" "}
           with specialization in both front-end and back-end technologies. My
           journey is marked by a strong command of
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 rounded border-skills dark:border-zinc-600 bg-neutral-50 dark:bg-zinc-800 text-neutral-900 dark:text-neutral-100">
+          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 rounded border-skills dark:border-zinc-600 bg-neutral-50 dark:bg-zinc-900 text-neutral-900 dark:text-neutral-100">
             <img className="w-4 h-4 mr-1" src="/images/js.png" alt="js" />
             <span>Javascript</span>
           </button>
           ,
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 rounded border-skills dark:border-zinc-600 bg-neutral-50 dark:bg-zinc-800 text-neutral-900 dark:text-neutral-100">
+          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 rounded border-skills dark:border-zinc-600 bg-neutral-50 dark:bg-zinc-900 text-neutral-900 dark:text-neutral-100">
             <img className="w-4 h-4 mr-1" src="/images/react.png" alt="js" />
             <span>React</span>
           </button>{" "}
           ,
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 rounded border-skills dark:border-zinc-600 bg-neutral-50 dark:bg-zinc-800 text-neutral-900 dark:text-neutral-100">
+          <div className="inline-flex items-center p-1 mx-1 text-sm leading-4 rounded border-skills dark:border-zinc-500 bg-neutral-50 dark:bg-zinc-900 text-neutral-900 dark:text-white">
             <img className="w-4 h-4 mr-1" src="/images/next-js.png" alt="js" />
             <span>Next js</span>
-          </button>{" "}
+          </div>{" "}
           and
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 rounded border-skills dark:border-zinc-600 bg-neutral-50 dark:bg-zinc-800 text-neutral-900 dark:text-neutral-100">
+          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 rounded border-skills dark:border-zinc-600 bg-neutral-50 dark:bg-zinc-900 text-neutral-900 dark:text-neutral-100">
             <img className="w-4 h-4 mr-1 " src="/images/express.png" alt="js" />
             <span>Express js</span>
           </button>

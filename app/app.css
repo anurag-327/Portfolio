@@ -3,9 +3,16 @@
 .bg-grid {
     --grid-color: rgba(0,0,0,var(--grid-opacity,0.5));
     opacity: 1;
+    /* background-image: url("/grid1.png"); */
+    /* background-size: contain; */
+    /* background-position: center; */
     background-image: linear-gradient(var(--grid-color) .5px,transparent .5px),linear-gradient(to right,var(--grid-color) .5px,transparent .5px);
     background-size: var(--grid-size,80px) var(--grid-size,80px);
     }
+
+.landingbutton{
+    border-bottom: 6px solid black;
+}
 
 .border-project{
     border: 1px solid  rgb(209 213 219);
