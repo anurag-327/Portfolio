@@ -3,7 +3,7 @@ import { ArrowLineUpRight, ReadCvLogo } from "@phosphor-icons/react/dist/ssr";
 const Home_About = () => {
   return (
     <div className="mt-12 ">
-      <div className="w-full px-4 py-4 border-t-2 border-b-8 border-black shadow-sm bg-emerald-300 landingbutton hand-out group md:w-fit dark:border-gray-600 border-x-2 shadow-black dark:bg-zinc-900 dark:text-white rounded-2xl">
+      <div className="w-[90%] px-4 py-4 border-t-2 border-b-8 border-black shadow-sm bg-emerald-300 landingbutton hand-out group md:w-fit dark:border-gray-600 border-x-2 shadow-black dark:bg-zinc-900 dark:text-white rounded-2xl">
         <span className="pr-2 text-3xl font-bold text-black dark:text-white md:text-4xl">
           <span className="hand ">👋</span> Hi, I'm Anurag!
         </span>
