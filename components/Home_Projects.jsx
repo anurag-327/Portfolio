@@ -1,21 +1,22 @@
-import React from "react";
+"use client";
 import { projects } from "@/data/data";
-import { Socicons } from "socicons";
 import {
   ArrowRight,
   Link,
   LinkSimpleHorizontal,
 } from "@phosphor-icons/react/dist/ssr";
+import { motion } from "framer-motion";
 function Project({ data }) {
   return (
-    <li className=" w-[100%] box-border hover:shadow-xl shadow-md dark:bg-zinc-900 border-project   mx-auto hover:bg-gray-50  px-4 py-3 dark:border-dark bg-white rounded-xl md:w-[90%] transition duration-300">
+    <motion.li
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ delay: 0.3 }}
+      className=" w-[100%] box-border hover:shadow-md shadow-sm dark:bg-zinc-900 border-project mx-auto hover:bg-gray-50  px-4 py-3 dark:border-dark bg-white rounded-xl  transition duration-300"
+    >
       <div className="flex flex-col no-underline text-zinc-700 dark:text-white">
         <div className="flex items-center">
-          {/* <img
-            className="w-4 h-4 px-2 rounded-md dark:bg-green-300"
-            src={data.logo.src}
-            alt={data.name}
-          /> */}
           <a
             href={data.code}
             target="blank"
@@ -39,7 +40,7 @@ function Project({ data }) {
             <div className="flex items-center gap-2 overflow-hidden ">
               <a
                 href={data.link}
-                className="flex items-center font-[500] gap-2 text-xs text-blue-600 no-underline hover:underline"
+                className="flex items-center font-[500] gap-2 text-xs w-full text-blue-600 no-underline hover:underline"
                 target="blank"
               >
                 <LinkSimpleHorizontal
@@ -52,7 +53,7 @@ function Project({ data }) {
           )}
         </div>
       </div>
-    </li>
+    </motion.li>
   );
 }
 const Home_Projects = () => {
@@ -61,7 +62,7 @@ const Home_Projects = () => {
     <div className="w-full mt-10">
       <h2 className="font-bold text-violet-700 dark:text-white"># Projects</h2>
       <div className="w-full">
-        <div className="flex flex-col flex-wrap w-full gap-3 p-0 list-none md:gap-5 m-o md:flex-row">
+        <div className="grid w-full grid-cols-1 gap-3 p-0 list-none md:gap-5 m-o md:flex-row">
           {projectsList.map((data, index) => (
             <Project key={index} data={data} />
           ))}

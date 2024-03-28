@@ -158,23 +158,13 @@ function Projects() {
       code: "https://github.com/anurag-327/QuickSign",
       link: "https://quick-sign.vercel.app",
       points: [
-        "Implemented secured authentication and authorization using json web tokens",
-        "Crafted a robust and stable API in express",
-        "Used react, tailwind css for frontend and contextAPI for efficient state managemen",
-      ],
-    },
-    {
-      id: 3,
-      name: "logger",
-      description: `Logger is your partner for counting visitors with ease, offering insights without intrusion.`,
-      toolsused: "Next JS, Zustand, supabase",
-
-      code: "https://github.com/anurag-327/logger",
-      link: "https://logger-mocha-six.vercel.app/",
-      points: [
-        "Developed and implemented a non-intrusive visitor counting system, Logger, for websites",
-        "Engineered Logger to be scalable, accommodating varying levels of website traffic, while optimizing performance for resource efficiency.",
-        "Integrated Supabase for streamlined and real-time data management in the Logger project, ensuring efficiency and ease of use.",
+        "Architected and deployed an OAuth Provider solution, enabling seamless signup experiences across platforms",
+        `Implemented robust security measures using JSON Web Tokens (JWT), leading to a 25% reduction in unauthorized
+access incidents`,
+        `Created OAuth API’s, contributing to a 20% improvement in cross-platform user authentication and authorization
+efficiency`,
+        `Utilized React and Tailwind CSS for the frontend, resulting in a 40% enhancement in user engagement and
+satisfaction`,
       ],
     },
     {
@@ -186,13 +176,45 @@ function Projects() {
       code: "https://github.com/anurag-327/Codemon",
       link: "",
       points: [
-        "Developed a versatile web-based IDE for running CPP codes, DSA problem-solving, and debugging.",
-        "Managed complete state of the app with Zustand library",
-        "Constructed APIs using Express.js, Node.js, and MongoDB to facilitate code execution and management.",
+        `Pioneered a web-based IDE for compiling CPP codes and solving DSA problems.`,
+        `Executed Node.js with the childprocess module, reducing CPP code compilation time by 30%.`,
+        `Developed 20+ API endpoints for code execution and management, resulting in a 40% speed improvement.`,
+        `Dockerized APIs for streamlined deployment, enhancing scalability and ensuring consistent performance, resulting
+in a 20% reduction in deployment-related issues.`,
       ],
     },
     {
       id: 3,
+      name: "logger",
+      description: `Logger is your partner for counting visitors with ease, offering insights without intrusion.`,
+      toolsused: "Next JS, Zustand, supabase",
+
+      code: "https://github.com/anurag-327/logger",
+      link: "https://logger-mocha-six.vercel.app/",
+      points: [
+        `Created a non-intrusive system, leading to a 20% improvement in website visitor counting accuracy.`,
+        `Applied Zustand for a 15% reduction in page load times and improved performance.`,
+        `Deployed automated cron jobs in Logger system, streamlining log organization and system performance; achieved a
+30% increase in efficiency and real-time data processing accuracy.`,
+      ],
+    },
+
+    {
+      id: 4,
+      name: "Pint",
+      description: `An app that frames the screenshots inside a beautiful gradient pattern.`,
+      toolsused: "Next JS, Tailwind CSS and appwrite",
+      code: "https://github.com/anurag-327/hackfinder",
+      link: "https://pint-blue.vercel.app/",
+      points: [
+        `An app that frames the screenshots inside a beautiful gradient pattern`,
+        `Enhanced performance and security by integrating Appwrite Cloud services, lowering data storage costs by 25%.`,
+        `Elevated an open-source GitHub repository resulting in heightened code quality, reduced bugs, and a remarkable
+40% acceleration in feature delivery`,
+      ],
+    },
+    {
+      id: 5,
       name: "Socions",
       description:
         "An icon generating library for genrating icons of brands and tech stacks. ",
@@ -205,33 +227,21 @@ function Projects() {
         "User-friendly design for seamless icon integration in web and mobile apps",
       ],
     },
-    {
-      id: 5,
-      name: "Pint",
-      description: `An app that frames the screenshots inside a beautiful gradient pattern.`,
-      toolsused: "Next JS, Tailwind CSS and appwrite",
-      code: "https://github.com/anurag-327/hackfinder",
-      link: "https://pint-blue.vercel.app/",
-      points: [
-        "Handled authentication and storage for the app with Appwrite Cloud services",
-        "Managed user data and app data with Zustand",
-        "Used Tailwind CSS and radix UI for accessible and configurable components.",
-      ],
-    },
-    {
-      id: 3,
-      name: "Vault",
-      description:
-        "A secure credential storage solution ensuring your sensitive data is safeguarded with robust encryption.",
-      toolsused: "React, Express js, Node Js and MongoDB",
-      code: "https://github.com/anurag-327/PasswordManager",
-      link: "https://my-vault-pm.vercel.app",
-      points: [
-        "Securedly stored and managed credentials with strong encryption methods.",
-        "Safeguarded sensitive information, ensuring data protection and security.",
-        "Ensured data security and user data protection through robust encryption methods.",
-      ],
-    },
+
+    // {
+    //   id: 6,
+    //   name: "Vault",
+    //   description:
+    //     "A secure credential storage solution ensuring your sensitive data is safeguarded with robust encryption.",
+    //   toolsused: "React, Express js, Node Js and MongoDB",
+    //   code: "https://github.com/anurag-327/PasswordManager",
+    //   link: "https://my-vault-pm.vercel.app",
+    //   points: [
+    //     "Securedly stored and managed credentials with strong encryption methods.",
+    //     "Safeguarded sensitive information, ensuring data protection and security.",
+    //     "Ensured data security and user data protection through robust encryption methods.",
+    //   ],
+    // },
   ];
 
   return (
@@ -257,7 +267,7 @@ function Achievements() {
             href={socials.leetcode}
             className="font-normal text-blue-500 no-underline border-b-2"
           >
-            250 + Problems across Leetcode and Coding Ninjas
+            350 + Problems across Leetcode and Coding Ninjas
           </a>
         </li>
         <li>

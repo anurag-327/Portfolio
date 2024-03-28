@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowLineUpRight, ReadCvLogo } from "@phosphor-icons/react";
+import { ArrowLineUpRight, ReadCvLogo } from "@phosphor-icons/react/dist/ssr";
 const Home_About = () => {
   return (
     <div className="mt-12 ">

@@ -3,7 +3,7 @@ export const socials = {
   linkedin: "https://www.linkedin.com/in/anuragsr327",
   twitter: "https://twitter.com/itsAnurag_sri",
   resume:
-    "https://drive.google.com/file/d/1619EX60ku3hoFsPP0AVt2eExTPl2z0Bq/view?usp=sharing",
+    "https://drive.google.com/file/d/1WoYeVM3G7EWqdT29T4odE83zOQe10vEG/view",
   instagram: "#",
   codechef: "https://www.codechef.com/users/anurag_cp273",
   leetcode: "https://leetcode.com/Anurag_sr/",
@@ -50,7 +50,7 @@ export const projects = [
     logo: codemon_logo,
     image: codemon,
     code: "https://github.com/anurag-327/codemon",
-    link: "",
+    link: "https://codemon-five.vercel.app/",
     points: [
       "Developed a versatile web-based IDE for running CPP codes, DSA problem-solving, and debugging.",
       "Managed complete state of the app with Zustand library",

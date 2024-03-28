@@ -3,7 +3,7 @@ import "./app.css";
 import { Inter, Montserrat, Poppins } from "next/font/google";
 
 const font = Poppins({
-  subsets: ["latin-ext"],
+  subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500"],
 });
 export const metadata = {

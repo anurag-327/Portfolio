@@ -10,6 +10,7 @@ function Project({ data }) {
             className="w-full mx-auto mt-4 rounded-md dark:bg-green-300"
             src={data.image.src}
             alt={data.name}
+            loading="lazy"
           />
         </div>
         <div className="flex items-center justify-center w-full gap-2">
