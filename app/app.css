@@ -15,7 +15,10 @@
 }
 
 .border-project{
-    border: 1px solid  rgb(209 213 219);
+    border: 2px solid  rgb(209 213 219);
+}  
+.border-project-landing{
+    border: 2px solid  rgb(228 228 231);
 }  
 .border-dark{
     border:2px solid rgb(31 41 55)
@@ -24,6 +27,7 @@
 {
     border:1px solid  rgba(156, 163, 175, 0.347);
 }
+
 
 @keyframes shake {
     0% { transform: rotate(0deg); }
@@ -51,3 +55,12 @@
 {
     transform: rotate(360deg);
 }
+
+.card {
+    /* Your card styles */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px); /* Move the card up by 10px on hover */
+  }

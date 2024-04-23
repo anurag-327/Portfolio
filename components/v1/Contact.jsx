@@ -1,19 +1,20 @@
-import {
-  Envelope,
-  EnvelopeOpen,
-  GithubLogo,
-  LinkedinLogo,
-  PhoneCall,
-  TwitterLogo,
-} from "@phosphor-icons/react/dist/ssr";
-import React from "react";
+import image from "@/public/personal/profile1.jpg";
+import Container from "../ui/Container";
+import Image from "next/image";
 
 const Contact = () => {
   return (
-    <div className="w-full my-10 overflow-hidden">
-      <h2 className="text-4xl font-bold text-violet-700 dark:text-white">
-        # Contact me
-      </h2>
+    <Container>
+      <Section1 />
+      {/* <DevCard /> */}
+    </Container>
+  );
+};
+
+function Section1() {
+  return (
+    <div className="my-10 overflow-hidden ">
+      <h2 className="text-4xl text-blue-600 dark:text-white"># Contact Me</h2>
       <p className="text-sm md:text-lg">
         Have a question or just want to say hello👋? I'm always open for a chat.
         Feel free to reach out through any of the channels below:
@@ -68,6 +69,55 @@ const Contact = () => {
       </div>
     </div>
   );
-};
+}
 
+function DevCard() {
+  return (
+    <div className="max-w-xs overflow-hidden bg-white rounded shadow-lg">
+      <img
+        className="w-20 h-20 mx-auto mt-4 rounded-full"
+        src="developer.jpg"
+        alt="Developer"
+      />
+      <div className="px-6 py-4 text-center">
+        <div className="mb-2 text-xl font-bold">John Doe</div>
+        <p className="text-sm text-gray-700">Full Stack Developer</p>
+        <div className="mt-4">
+          <a
+            href="#"
+            className="inline-block px-3 py-1 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+          >
+            #JavaScript
+          </a>
+          <a
+            href="#"
+            className="inline-block px-3 py-1 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+          >
+            #React
+          </a>
+          <a
+            href="#"
+            className="inline-block px-3 py-1 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full"
+          >
+            #TailwindCSS
+          </a>
+        </div>
+      </div>
+      <div className="px-6 py-2 bg-gray-100">
+        <div className="flex justify-between text-sm">
+          <div className="text-gray-600">Repositories</div>
+          <div className="text-gray-900">50</div>
+        </div>
+        <div className="flex justify-between text-sm">
+          <div className="text-gray-600">Stars</div>
+          <div className="text-gray-900">200</div>
+        </div>
+        <div className="flex justify-between text-sm">
+          <div className="text-gray-600">Followers</div>
+          <div className="text-gray-900">500</div>
+        </div>
+      </div>
+    </div>
+  );
+}
 export default Contact;

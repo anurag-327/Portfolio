@@ -8,13 +8,19 @@ export const socials = {
   codechef: "https://www.codechef.com/users/anurag_cp273",
   leetcode: "https://leetcode.com/Anurag_sr/",
 };
-import hackfinder_logo from "../public/projects/hackfinder_logo.svg";
-import quicksign_logo from "../public/projects/quicksign_logo.svg";
-import codemon_logo from "../public/projects/codemon_logo.svg";
-import vault_logo from "../public/projects/vault_logo.svg";
-import pint_logo from "../public/projects/pint_logo.svg";
-import socicons_logo from "../public/projects/socicons_logo.svg";
-import logger_logo from "../public/projects/logger_logo.png";
+import hackfinder_logo from "../public/projects/hackfinder.svg";
+import quicksign_logo from "../public/projects/quicksign.svg";
+import codemon_logo from "../public/projects/codemon.svg";
+import vault_logo from "../public/projects/vault.svg";
+import pint_logo from "../public/projects/pint.svg";
+import socicons_logo from "../public/projects/socicons.svg";
+import logger_logo from "../public/projects/logger.svg";
+import gonorth_logo from "../public/projects/go-north.svg";
+import playground_logo from "../public/projects/playground.svg";
+import anubhuti_logo from "../public/projects/anubhuti.svg";
+import chatapp_logo from "../public/projects/chatapp.svg";
+import notesapp_logo from "../public/projects/notes.svg";
+import ecommerce_logo from "../public/projects/ecommerce.svg";
 import quicksign from "../public/projectimages/quicksign.png";
 import codemon from "../public/projectimages/codemon3.png";
 import hackfinder from "../public/projectimages/hackfinder.png";
@@ -26,8 +32,9 @@ export const projects = [
   {
     id: 1,
     name: "QuickSign",
+    tag: "OAuth Provider for seamless User Sign-ups across",
     description:
-      "Streamlined OAuth Provider for signup across platforms, offering a smooth user experience.",
+      "An OAuth Provider for seamless User Sign-ups across platforms, offering a smooth user experience.",
     toolsused: "React, Express js, Node Js and MongoDB",
     logo: quicksign_logo,
     image: quicksign,
@@ -44,6 +51,7 @@ export const projects = [
   {
     id: 2,
     name: "codemon",
+    tag: "A Web-based IDE for CPP Compilation and DSA Problem Solving",
     description:
       "A web-based IDE for compiling CPP codes and solving DSA problems.",
     toolsused: "Next JS, Zustand, Express js and MongoDB",
@@ -62,6 +70,7 @@ export const projects = [
   {
     id: 3,
     name: "logger",
+    tag: "Visitor Tracking and Analytics Tool with Privacy in Mind",
     description: `Logger is your partner for counting visitors with ease, offering insights without intrusion.`,
     toolsused: "Next JS, Zustand, supabase",
     logo: logger_logo,
@@ -76,9 +85,30 @@ export const projects = [
     stack: "Next JS",
     stack_logo: "https://d26c7l40gvbbg2.cloudfront.net/tool_icons/nextjs.svg",
   },
+
+  {
+    id: 11,
+    name: "Anubhuti",
+    tag: "Engaging website for college fest Anubhuti, showcasing events and info.",
+    description:
+      "Engaging website for college fest Anubhuti, showcasing events and info.",
+    toolsused: "Next.js, Tailwind CSS, Supabase",
+    logo: anubhuti_logo,
+    image: null,
+    code: "https://github.com/ashishk1331/Anubhuti-2K24",
+    link: "https://anubhuti24.in/admin",
+    points: [
+      "Crafted a user-friendly interface with Next.js and Tailwind CSS.",
+      "Implemented responsive design for optimal viewing on all devices.",
+      "Integrated event details and schedules using Supabase for easy access and navigation.",
+    ],
+    stack: "Next.js, Tailwind CSS, Supabase",
+    stack_logo: "https://d26c7l40gvbbg2.cloudfront.net/tool_icons/nextjs.svg",
+  },
   {
     id: 4,
     name: "socions",
+    tag: "A Library for Generating Icons of Brands and Tech Stacks",
     description:
       "An icon generating library for genrating icons of brands and tech stacks. ",
     toolsused: "Svg, npm package, esbuild, javascript",
@@ -145,9 +175,10 @@ export const projects = [
   {
     id: 8,
     name: "Chat App",
-    description: "Real time One to One Chat app.",
+    description:
+      "Real time One to One Chat app built using react, nodejs and mongodb.",
     toolsused: "React, Express js, Node Js, MongoDB",
-    logo: "",
+    logo: chatapp_logo,
     image: "",
     code: "https://github.com/anurag-327/Chat-App",
     link: "",
@@ -158,15 +189,29 @@ export const projects = [
   {
     id: 9,
     name: "E-Commerce Website",
-    description: "E-Commmerce Website built On React.",
+    description: "E-Commmerce Website built using React.",
     toolsused: "React, Express js, Node Js, MongoDB",
-    logo: "",
+    logo: ecommerce_logo,
     image: "",
     code: "https://github.com/anurag-327/E-Commerce",
     link: "",
     points: [],
     stack: "React",
     stack_logo: "https://d26c7l40gvbbg2.cloudfront.net/tool_icons/reactjs.svg",
+  },
+  {
+    id: 11,
+    name: "Google Keep Notes Clone",
+    description:
+      "Google keep notes clone that gives user flexibility of adding, deleting, updating and restoring deleted notes.",
+    toolsused: "HTML, CSS, JS, EJS, Express js, MongoDB",
+    logo: notesapp_logo,
+    image: "",
+    code: "https://github.com/anurag-327/Google-Keep-Notes",
+    link: "",
+    points: [],
+    stack: "Javascript",
+    stack_logo: "https://img.icons8.com/color/48/javascript--v1.png",
   },
   {
     id: 10,
@@ -182,20 +227,7 @@ export const projects = [
     stack: "Javascript",
     stack_logo: "https://img.icons8.com/color/48/javascript--v1.png",
   },
-  {
-    id: 11,
-    name: "Google Keep Notes Clone",
-    description:
-      "This project is a clone of Google keep notes that gives user flexibility of adding, deleting, updating and restoring deleted notes.",
-    toolsused: "HTML, CSS, JS, EJS, Express js, MongoDB",
-    logo: "",
-    image: "",
-    code: "https://github.com/anurag-327/Google-Keep-Notes",
-    link: "",
-    points: [],
-    stack: "Javascript",
-    stack_logo: "https://img.icons8.com/color/48/javascript--v1.png",
-  },
+
   {
     id: 11,
     name: "Netflix UI Clone",
@@ -222,5 +254,21 @@ export const projects = [
     points: [],
     stack: "Multer",
     stack_logo: "https://img.icons8.com/color/48/javascript--v1.png",
+  },
+];
+
+export const currentProjects = [
+  {
+    name: "Go North",
+    description:
+      "Passionate design agency by friends. Websites, templates, dreams brought to life!",
+    url: "https://go-north.vercel.app/",
+    logo: gonorth_logo,
+  },
+  {
+    name: "Playground",
+    description: "Practice Image Processing Algorithms in the Browser!",
+    url: "https://github.com/ashishk1331/PlayGround",
+    logo: playground_logo,
   },
 ];

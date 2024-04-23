@@ -19,22 +19,22 @@ const About_About = () => {
           </span>{" "}
           with specialization in both front-end and back-end technologies. My
           journey is marked by a strong command of
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img className="w-4 h-4 mr-1" src="/images/js.png" alt="js" />
             <span>Javascript</span>
           </button>
           ,
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img className="w-4 h-4 mr-1" src="/images/react.png" alt="js" />
             <span>React</span>
           </button>{" "}
           ,
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img className="w-4 h-4 mr-1" src="/images/next-js.png" alt="js" />
             <span>Next js</span>
           </button>{" "}
           and
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img className="w-4 h-4 mr-1 " src="/images/express.png" alt="js" />
             <span>Express js</span>
           </button>
@@ -57,7 +57,7 @@ const About_About = () => {
           From the outset, I've embraced a multitude of technologies, each
           adding a layer to my skill set. As my knowledge expanded, I ventured
           into a realm of languages such as
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
@@ -66,7 +66,7 @@ const About_About = () => {
             <span>CPP</span>
           </button>{" "}
           ,
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://img.icons8.com/color/48/javascript--v1.png"
@@ -75,7 +75,7 @@ const About_About = () => {
             <span>Javascript</span>
           </button>{" "}
           and
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://img.icons8.com/color/48/typescript.png"
@@ -93,7 +93,7 @@ const About_About = () => {
         </h2>
         <p>
           Frameworks like
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/reactjs.svg"
@@ -102,7 +102,7 @@ const About_About = () => {
             <span>React</span>
           </button>
           ,
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/nextjs.svg"
@@ -111,7 +111,7 @@ const About_About = () => {
             <span>Next</span>
           </button>
           ,
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/nodejs.svg"
@@ -120,7 +120,7 @@ const About_About = () => {
             <span>Node js</span>
           </button>
           ,
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://d26c7l40gvbbg2.cloudfront.net/tool_icons/express.svg"
@@ -141,7 +141,7 @@ const About_About = () => {
         <p>
           It hasn't just been about mastering technologies; it's been a journey
           of exploration and discovery. I've delved into the world of API's with
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://img.icons8.com/nolan/48/api-settings.png"
@@ -150,7 +150,7 @@ const About_About = () => {
             <span>Rest API's</span>
           </button>
           and
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://seeklogo.com/images/G/graphql-logo-97CBBB6D51-seeklogo.com.png"
@@ -159,7 +159,7 @@ const About_About = () => {
             <span>GraphQL API's</span>
           </button>
           and I've embraced platforms such as
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png"
@@ -168,7 +168,7 @@ const About_About = () => {
             <span>Supabase</span>
           </button>
           ,
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://seeklogo.com/images/F/firebase-logo-402F407EE0-seeklogo.com.png"
@@ -177,7 +177,7 @@ const About_About = () => {
             <span>Firebase</span>
           </button>
           and
-          <button className="inline-flex items-center p-1 mx-1 text-sm leading-4 border border-gray-500 rounded dark:border-neutral-700 bg-neutral-50 dark:bg-zinc-600 text-neutral-900 dark:text-neutral-100">
+          <button className="skill-btn border-skills">
             <img
               className="w-4 h-4 mr-1"
               src="https://seeklogo.com/images/A/appwrite-logo-D33B39992A-seeklogo.com.png"

@@ -32,7 +32,7 @@ export default function Logger() {
       href="https://logger-mocha-six.vercel.app/"
       target="blank"
       title="Powered by logger"
-      className="fixed h-9 hidden no-underline  right-0 md:flex gap-1 items-center justify-center  text-sm text-white rotate-90 top-[35%] md:top-[20%]  rounded-l-md bg-zinc-700"
+      className="flex items-center justify-center gap-1 text-sm text-white no-underline rotate-90 rounded-l-sm h-9 bg-zinc-700"
     >
       <div className="flex items-center justify-center h-full pl-2">
         <img
@@ -44,7 +44,7 @@ export default function Logger() {
         />
       </div>
       <div className="flex h-full gap-1">
-        <span className="flex items-center justify-center ">Visitors</span>
+        <span className="flex items-center justify-center ">Total views</span>
         <span className="flex items-center justify-center h-full px-1 text-sm text-white bg-green-600 min-w-[40px] ">
           {" "}
           {visitors}{" "}

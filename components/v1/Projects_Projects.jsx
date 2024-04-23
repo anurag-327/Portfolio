@@ -1,13 +1,16 @@
 import React from "react";
 import { projects } from "@/data/data";
-import { ArrowSquareOut, GithubLogo } from "@phosphor-icons/react/dist/ssr";
+import {
+  ArrowSquareOut,
+  GithubLogo,
+  RocketLaunch,
+} from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
-import Grid from "./ui/Grid";
-
+import Grid from "../ui/Grid";
 function Project({ data }) {
   return (
     <li className="box-border w-full mx-auto transition-all rounded-lg bg-gray-50 dark:bg-zinc-900 border-project hover:bg-gray-50 dark:border-zinc-800">
-      <div className="flex flex-col px-6 py-3 no-underline text-zinc-700 dark:text-white">
+      <div className="flex flex-col items-end px-6 py-3 no-underline text-zinc-700 dark:text-white">
         <div className="flex items-center justify-start w-full gap-4">
           <Image
             className="aspect-square"
@@ -42,8 +45,8 @@ function Project({ data }) {
   );
 }
 const Projects_Projects = () => {
-  const projectsdisplay = projects.slice(0, 11);
-  const otherprojects = projects.slice(11, projects.length);
+  const projectsdisplay = projects.slice(0, 8);
+  const otherprojects = projects.slice(8, projects.length);
   return (
     <div>
       <div className="w-full mt-10">
@@ -53,7 +56,7 @@ const Projects_Projects = () => {
           you might experience slow API responses due to API hoisting
           limitations.
         </p>
-        <Grid>
+        <Grid className="grid w-full grid-cols-2 mt-20 -mx-10 list-none md:gap-5 ">
           {projectsdisplay.map((data, index) => (
             <Project key={index} data={data} />
           ))}

@@ -9,10 +9,10 @@ import {
 import { socials } from "@/data/data";
 const Header = () => {
   return (
-    <header className="z-50 flex justify-between w-full py-1 mt-2 ">
+    <header className="z-50 flex justify-between w-full py-4 mt-2">
       <div className="flex items-center">
         <a
-          className="flex items-center text-xl font-semibold no-underline text-zinc-700 dark:text-zinc-300"
+          className="flex items-center text-xl font-[500] no-underline text-zinc-700 dark:text-zinc-300"
           href="/"
         >
           @anurag
