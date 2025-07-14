@@ -72,7 +72,7 @@ function AboutMe() {
         </p>
         <p className="-mt-1 text-lg first-letter:text-2xl">
           🚀 I am currently on my way to master
-          <span className="font-semibold text-zinc-600"> Rust</span> and
+          <span className="font-semibold text-zinc-600"> Go</span> and
           <span className="font-semibold text-zinc-600"> Devops</span>.
         </p>
         <div className="flex flex-col gap-1 md:gap-2 md:flex-row">
