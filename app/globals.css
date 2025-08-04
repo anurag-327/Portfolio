@@ -1,11 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap')
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-    .skill-btn{
-        @apply inline-flex items-center px-3 py-1 mx-1 text-sm leading-4 bg-white border border-gray-300 rounded-full  dark:border-gray-800 dark:bg-zinc-900 text-neutral-900 dark:text-white  
-    }
+.wavvy {
+  text-decoration: underline wavy #4e4b4b;
 }
+
+/* base light mode */
+.md-content pre {
+  background-color: #e5e7eb; 
+  color: #1f2937;        
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+
+  .dark .md-content pre {
+    background-color: #27272a;
+    color: #f3f4f6;           
+  }
+
