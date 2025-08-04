@@ -50,8 +50,8 @@ export default function Intro() {
         </p>
 
         <p>
-          This is my new portfolio site and it&apos;s currently under
-          development. You can still visit my old one at{" "}
+          I&apos;ve started sharing my blogs and learnings here! Meanwhile, feel
+          free to check out my old portfolio at{" "}
           <a
             href="https://anuragsri327.vercel.app/"
             target="_blank"
