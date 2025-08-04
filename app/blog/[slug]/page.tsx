@@ -1,5 +1,7 @@
 import BlogHeader from "@/components/blog/BlogHeader";
 import BlogRenderer from "@/components/blog/BlogRenderer";
+import { metadata } from "@/meta-data/metadata";
+import { Metadata } from "next";
 
 export default async function Page({
   params,
@@ -17,4 +19,35 @@ export default async function Page({
     </div>
   );
 }
-export const dynamicParams = false;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const blog = metadata.find((item) => item.slug === slug);
+
+  if (!blog) {
+    return {
+      title: "Blog not found",
+      description: "This blog post does not exist.",
+    };
+  }
+
+  return {
+    title: blog.title,
+    description: blog.description,
+    openGraph: {
+      title: blog.title,
+      description: blog.description,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: blog.title,
+      description: blog.description,
+    },
+    keywords: blog.tags.join(", "),
+  };
+}

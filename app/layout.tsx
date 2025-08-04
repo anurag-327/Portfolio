@@ -38,7 +38,7 @@ export default function RootLayout({
         className={` ${inter.className} relative dark:bg-black dark:text-white `}
       >
         <Image
-          className="absolute left-0 md:left-1/2 top-0 -z-10 -translate-x-1/2 lg:scale-100 object-cover w-full"
+          className="absolute left-0 md:left-1/2 -top-20 -z-10 -translate-x-1/2 lg:scale-100 object-cover w-full"
           src={gradientImg}
           alt="Gradient background"
           priority

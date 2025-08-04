@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeSwitch from "./ThemeSwitecher";
 
 type NavItem = {
   name: string;
   href: string;
 };
 
-const navItems: NavItem[] = [{ name: "blogs", href: "/blog" }];
+const navItems: NavItem[] = [{ name: "Blog", href: "/blog" }];
 
 export default function Header() {
   const pathname = usePathname();
@@ -36,6 +37,7 @@ export default function Header() {
             {name}
           </Link>
         ))}
+        <ThemeSwitch />
       </nav>
     </header>
   );

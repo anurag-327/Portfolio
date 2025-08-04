@@ -12,12 +12,11 @@ export default function Intro() {
           <Link
             href="https://www.codolio.dev/"
             target="_blank"
-            className="underline underline-offset-2 hover:text-blue-500"
+            className=" hover:text-blue-500"
           >
             Codolio
           </Link>
-          . I hold a B.Tech in Computer Science from KNIT Sultanpur with a CGPA
-          of 9.07.
+          .
         </p>
 
         <div>
@@ -42,10 +41,10 @@ export default function Intro() {
           I write about my engineering decisions and backend learnings. All my
           blogs will be hosted here — read them at{" "}
           <Link
-            href="/blogs"
+            href="/blog"
             className="wavvy hover:text-blue-500 text-zinc-800 dark:text-zinc-200 underline-offset-4"
           >
-            /blogs
+            /blog
           </Link>
           .
         </p>
@@ -63,7 +62,7 @@ export default function Intro() {
           .
         </p>
 
-        <div className="mt-6 border-t pt-4 text-zinc-500 dark:text-zinc-400">
+        <div className="dark:border-gray-700 pt-10 text-zinc-500 dark:text-zinc-400">
           <p>
             Feel free to reach out — whether it&apos;s about tech, discussions,
             or just to say hi:
