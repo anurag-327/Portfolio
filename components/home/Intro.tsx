@@ -22,8 +22,8 @@ export default function Intro() {
 
         <div>
           I enjoy building fast, scalable systems with Go, Node.js, Redis, and
-          MongoDB. I've worked on real-time infra, notification services, and
-          internal tools like{" "}
+          MongoDB. I&apos;ve worked on real-time infra, notification services,
+          and internal tools like{" "}
           <a href="https://formwix-docs.vercel.app/" target="_blank">
             <span className="hover:text-blue-500 wavvy underline-offset-2">
               Formwix
@@ -51,8 +51,8 @@ export default function Intro() {
         </p>
 
         <p>
-          This is my new portfolio site and it's currently under development.
-          You can still visit my old one at{" "}
+          This is my new portfolio site and it&apos;s currently under
+          development. You can still visit my old one at{" "}
           <a
             href="https://anuragsri327.vercel.app/"
             target="_blank"
@@ -65,8 +65,8 @@ export default function Intro() {
 
         <div className="mt-6 border-t pt-4 text-zinc-500 dark:text-zinc-400">
           <p>
-            Feel free to reach out — whether it's about tech, discussions, or
-            just to say hi:
+            Feel free to reach out — whether it&apos;s about tech, discussions,
+            or just to say hi:
           </p>
           <ul className="mt-2 space-y-2 text-sm ml-4">
             <li className="flex items-center gap-2">
