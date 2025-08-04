@@ -21,10 +21,10 @@ export default function BlogListPage() {
           {metadata.map((post, index) => (
             <article key={post.slug}>
               <a href={`/blog/${post.slug}`} className="block group">
-                <h2 className="text-base text-white mb-0.5 group-hover:text-gray-300 transition-colors">
+                <h2 className="text-base dark:text-white mb-0.5 group-hover:text-gray-800 dark:group-hover:text-gray-300 transition-colors">
                   {index + 1}. {post.title}
                 </h2>
-                <time className="text-sm ml-4 text-gray-400">
+                <time className="text-sm ml-4 text-gray-800 dark:text-gray-400">
                   {formatDate(post.date)}
                 </time>
               </a>
