@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 export default function Avatar() {
   return (
-    <div className="relative order-first shrink p-4 md:order-last md:p-4">
+    <div className="relative order-first shrink md:order-last md:p-4">
       <Link href="https://www.linkedin.com/in/anuragsr327/ " target="__blank">
         <motion.div
           initial={{ opacity: 0, filter: "blur(10px)" }}

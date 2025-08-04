@@ -7,20 +7,41 @@ export default function ThemeSwitch() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    setIsDark(document.documentElement.classList.contains("dark"));
+    const theme = localStorage.getItem("theme");
+
+    if (theme === "light") {
+      document.documentElement.classList.remove("dark");
+      setIsDark(false);
+    } else {
+      // Default to dark if theme is 'dark' or null
+      document.documentElement.classList.add("dark");
+      setIsDark(true);
+      if (theme === null) {
+        localStorage.setItem("theme", "dark");
+      }
+    }
   }, []);
 
   const toggleTheme = () => {
     const html = document.documentElement;
-    html.classList.toggle("dark");
-    setIsDark(html.classList.contains("dark"));
+    const newIsDark = !html.classList.contains("dark");
+
+    if (newIsDark) {
+      html.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      html.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+
+    setIsDark(newIsDark);
   };
 
   return (
     <button
       onClick={toggleTheme}
       aria-label="Toggle Theme"
-      className="flex items-center justify-center transition-colors "
+      className="flex items-center justify-center transition-colors"
     >
       {isDark ? (
         <Sun size={18} className="text-yellow-400" />

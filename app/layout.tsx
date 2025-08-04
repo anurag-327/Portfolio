@@ -22,15 +22,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function() {
-              localStorage.getItem('theme') ==="dark" && document.documentElement.classList.add('dark') 
-              })();
-            `,
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark' || theme === null) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    `,
           }}
         />
       </head>
