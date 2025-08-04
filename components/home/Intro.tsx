@@ -55,7 +55,7 @@ export default function Intro() {
           <a
             href="https://anuragsri327.vercel.app/"
             target="_blank"
-            className="underline underline-offset-2 hover:text-blue-500"
+            className="hover:underline text-sm underline-offset-2 hover:text-blue-500"
           >
             anuragsri327.vercel.app
           </a>
