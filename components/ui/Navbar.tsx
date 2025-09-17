@@ -36,6 +36,8 @@ export default function Header() {
           className={`${
             spaceGrotesk.className
           } text-sm py-3 transition-all font-medium hover:opacity-80 ${
+            !href.startsWith("/") ? "hidden md:inline-block" : ""
+          } ${
             pathname === href
               ? "text-zinc-900 dark:text-zinc-50 "
               : "text-zinc-700 dark:text-zinc-200"
