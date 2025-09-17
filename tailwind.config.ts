@@ -13,6 +13,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        spaceGrotesk: ["var(--font-space-grotesk)"],
+        inter: ["var(--font-inter)"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

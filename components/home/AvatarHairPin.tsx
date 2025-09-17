@@ -17,7 +17,7 @@ export default function Avatar() {
             src="/images/avatar.jpg"
             alt="avatar"
             height={80}
-            className="grayscale dark:shadow-[inset_-5px_-18px_38px_22px_#000000]"
+            className="grayscale hover:grayscale-0 transition duration-500 dark:shadow-[inset_-5px_-18px_38px_22px_#000000]"
             width={80}
           />
         </motion.div>

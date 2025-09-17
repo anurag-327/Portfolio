@@ -4,7 +4,7 @@ export const Footer = () => {
   const year = String(new Date().getFullYear());
 
   return (
-    <footer className="flex flex-col text-zinc-700 dark:text-zinc-100 md:pt-0 pt-5">
+    <footer className="flex flex-col text-zinc-600 dark:text-zinc-400 md:pt-0 px-4 py-5">
       <hr className="w-full border-t border-zinc-150 dark:border-zinc-800" />
       <div className="flex items-center text-sm pt-2">
         <span>{year} © Anurag Srivastav</span>

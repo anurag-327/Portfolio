@@ -1,5 +1,4 @@
 import BlogHeader from "@/components/blog/BlogHeader";
-import BlogRenderer from "@/components/blog/BlogRenderer";
 import { metadata } from "@/meta-data/metadata";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -11,13 +10,11 @@ export default async function Page({
 }) {
   const { slug } = await params;
   const blog = metadata.find((item) => item.slug === slug);
-  if (!blog) notFound();
+  if (!blog || !blog.component) notFound();
   return (
     <div className="my-16 space-y-6">
-      <BlogHeader slug={slug} />
-      <div className="prose dark:prose-invert max-w-none">
-        <BlogRenderer id={slug} />
-      </div>
+      <BlogHeader blog={blog} />
+      {blog.component()}
     </div>
   );
 }

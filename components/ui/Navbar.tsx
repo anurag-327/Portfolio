@@ -3,42 +3,48 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeSwitch from "./ThemeSwitecher";
+import { Space_Grotesk } from "next/font/google";
 
 type NavItem = {
   name: string;
   href: string;
 };
 
-const navItems: NavItem[] = [{ name: "Blog", href: "/blog" }];
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
+});
+
+const navItems: NavItem[] = [
+  { name: "Home", href: "/" },
+  { name: "Blogs", href: "/blog" },
+  { name: "Project", href: "https://anuragsri327.vercel.app/projects" },
+  { name: "About", href: "https://anuragsri327.vercel.app/about" },
+];
 
 export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="w-full flex items-center justify-between">
-      <Link
-        href="/"
-        className="text-xl font-medium hover:opacity-70 transition-opacity"
-      >
-        Anurag
-      </Link>
-
-      <nav className="flex items-center gap-6">
-        {navItems.map(({ name, href }) => (
-          <Link
-            key={name}
-            href={href}
-            className={`text-sm transition-all hover:opacity-70 ${
-              pathname === href
-                ? "text-black font-medium dark:text-white"
-                : "text-gray-600 dark:text-gray-200"
-            }`}
-          >
-            {name}
-          </Link>
-        ))}
-        <ThemeSwitch />
-      </nav>
-    </header>
+    <nav className="flex items-center justify-between w-full gap-8">
+      {navItems.map(({ name, href }) => (
+        <Link
+          key={name}
+          href={href}
+          target={href.startsWith("/") ? "_self" : "_blank"}
+          className={`${
+            spaceGrotesk.className
+          } text-sm py-3 transition-all font-medium hover:opacity-80 ${
+            pathname === href
+              ? "text-zinc-900 dark:text-zinc-50 "
+              : "text-zinc-700 dark:text-zinc-200"
+          }`}
+        >
+          {name}
+        </Link>
+      ))}
+      <ThemeSwitch />
+    </nav>
   );
 }
