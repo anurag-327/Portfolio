@@ -16,9 +16,10 @@ export default function BlogFooter({
         <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-4">
           <p className="text-sm text-zinc-600 dark:text-zinc-400">
             <strong>Note:</strong> Everything shared in this blog comes from my
-            current understanding and experience at Codolio. I've written this
-            to help others learn the way I did. If anything feels off or you
-            have suggestions, feel free to share — I'm always learning too!
+            current understanding and experience at Codolio. I&apos;ve written
+            this to help others learn the way I did. If anything feels off or
+            you have suggestions, feel free to share — I&apos;m always learning
+            too!
           </p>
         </div>
       )}

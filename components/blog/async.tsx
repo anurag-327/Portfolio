@@ -14,8 +14,8 @@ export default function AsyncProgrammingBlog() {
       <div className="max-w-4xl mx-auto p-6">
         <div className="mb-12">
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            Ever waited in a long line to get your work done? You can't do
-            anything until your turn comes. That's{" "}
+            Ever waited in a long line to get your work done? You can&apos;t do
+            anything until your turn comes. That&apos;s{" "}
             <strong className="text-zinc-900 dark:text-zinc-200">
               synchronous
             </strong>{" "}
@@ -35,18 +35,19 @@ export default function AsyncProgrammingBlog() {
           </h2>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            Let's look at a real-world analogy: ordering food at a restaurant.
+            Let&apos;s look at a real-world analogy: ordering food at a
+            restaurant.
           </p>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            Suppose you're a waiter, and this is how you operate:
+            Suppose you&apos;re a waiter, and this is how you operate:
           </p>
           <OrderedList className="mb-6">
             <OrderedListItem>
               You take an order from <strong>Table 1</strong>
             </OrderedListItem>
             <OrderedListItem>
-              You go to the kitchen and wait until it's fully cooked
+              You go to the kitchen and wait until it&apos;s fully cooked
             </OrderedListItem>
             <OrderedListItem>You serve it</OrderedListItem>
             <OrderedListItem>
@@ -66,7 +67,7 @@ export default function AsyncProgrammingBlog() {
               <ListItem>Every table must wait for the previous one</ListItem>
               <ListItem>Long waiting times</ListItem>
               <ListItem>Poor customer experience</ListItem>
-              <ListItem>You're not using your time efficiently</ListItem>
+              <ListItem>You&apos;re not using your time efficiently</ListItem>
             </List>
           </div>
 
@@ -86,7 +87,7 @@ export default function AsyncProgrammingBlog() {
           </h2>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            Now let's imagine a more efficient restaurant flow:
+            Now let&apos;s imagine a more efficient restaurant flow:
           </p>
 
           <OrderedList className="mb-6">
@@ -95,7 +96,7 @@ export default function AsyncProgrammingBlog() {
               kitchen
             </OrderedListItem>
             <OrderedListItem>
-              While it's being cooked, you immediately take an order from{" "}
+              While it&apos;s being cooked, you immediately take an order from{" "}
               <strong>Table 2</strong>
             </OrderedListItem>
             <OrderedListItem>
@@ -118,7 +119,7 @@ export default function AsyncProgrammingBlog() {
               </ListItem>
               <ListItem>No table has to wait for others to finish</ListItem>
               <ListItem>
-                You're doing <strong>more in less time</strong>
+                You&apos;re doing <strong>more in less time</strong>
               </ListItem>
               <ListItem>Much smoother experience</ListItem>
             </List>
@@ -127,11 +128,12 @@ export default function AsyncProgrammingBlog() {
 
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-200">
-            Let's See in Context of Programming: How Async Helps in Real Code
+            Let&apos;s See in Context of Programming: How Async Helps in Real
+            Code
           </h2>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            Suppose you're building a{" "}
+            Suppose you&apos;re building a{" "}
             <strong className="text-zinc-900 dark:text-zinc-200">
               notification service
             </strong>{" "}
@@ -196,7 +198,7 @@ export default function AsyncProgrammingBlog() {
           {/* Async Way */}
           <div>
             <h3 className="text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-200">
-              Let's Optimize It with Async
+              Let&apos;s Optimize It with Async
             </h3>
 
             <Code>{`async function sendEmails(users) {
@@ -235,7 +237,7 @@ export default function AsyncProgrammingBlog() {
           </h2>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            So far, we've seen how{" "}
+            So far, we&apos;ve seen how{" "}
             <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded text-sm">
               async/await
             </code>{" "}
@@ -268,8 +270,8 @@ export default function AsyncProgrammingBlog() {
           </List>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            At scale, promises alone aren't enough to handle real-world async
-            processing needs. Instead, we use{" "}
+            At scale, promises alone aren&apos;t enough to handle real-world
+            async processing needs. Instead, we use{" "}
             <strong className="text-zinc-900 dark:text-zinc-200">
               infrastructure-level patterns
             </strong>{" "}
@@ -287,7 +289,8 @@ export default function AsyncProgrammingBlog() {
           </p>
 
           <p className="text-zinc-600 dark:text-zinc-400">
-            Let's see some common patterns used in real-world backend systems:
+            Let&apos;s see some common patterns used in real-world backend
+            systems:
           </p>
         </section>
 
@@ -334,8 +337,8 @@ export default function AsyncProgrammingBlog() {
 
             <List className="mb-4 text-zinc-600 dark:text-zinc-400">
               <ListItem>
-                <strong>Decouple components</strong> — The API doesn't wait for
-                task completion
+                <strong>Decouple components</strong> — The API doesn&apos;t wait
+                for task completion
               </ListItem>
               <ListItem>
                 <strong>Scale easily</strong> — Add more workers to process
@@ -367,7 +370,7 @@ export default function AsyncProgrammingBlog() {
                 The <strong>API receives the code</strong> and quickly pushes a
                 task like{" "}
                 <code className="inline px-1 py-0.5 text-sm bg-zinc-100 dark:bg-zinc-800 rounded">
-                  "Compile user123's code"
+                  Compile user123&apos;s code
                 </code>
                 into a <strong>message queue</strong>.
               </OrderedListItem>
@@ -425,7 +428,7 @@ export default function AsyncProgrammingBlog() {
             <strong className="text-zinc-900 dark:text-zinc-200">
               message streams allow multiple producer → multiple consumer groups
             </strong>
-            , where each group receives all messages independently. They're
+            , where each group receives all messages independently. They&apos;re
             perfect when{" "}
             <strong className="text-zinc-900 dark:text-zinc-200">
               many services need to react to the same stream of events
@@ -463,8 +466,8 @@ export default function AsyncProgrammingBlog() {
               Example: Uber Driver Location Streaming
             </h4>
             <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-              In a service like <strong>Uber</strong>, every driver's app sends{" "}
-              <strong>live GPS coordinates</strong> every few seconds.
+              In a service like <strong>Uber</strong>, every driver&apos;s app
+              sends <strong>live GPS coordinates</strong> every few seconds.
             </p>
 
             <Code>{`{
@@ -595,7 +598,7 @@ export default function AsyncProgrammingBlog() {
           </h3>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            In our journey through asynchronous processing, we've seen how
+            In our journey through asynchronous processing, we&apos;ve seen how
             <strong className="text-zinc-900 dark:text-zinc-200">
               message queues
             </strong>{" "}
@@ -619,8 +622,8 @@ export default function AsyncProgrammingBlog() {
                 real-time but not stored
               </ListItem>
               <ListItem>
-                <strong>Decoupled</strong>: Publishers don't know who's
-                listening
+                <strong>Decoupled</strong>: Publishers don&apos;t know
+                who&apos;s listening
               </ListItem>
               <ListItem>
                 <strong>Broadcast-style</strong>: Every subscriber gets their{" "}
@@ -666,7 +669,7 @@ export default function AsyncProgrammingBlog() {
             <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4">
               <p className="text-amber-800 dark:text-amber-300 text-sm">
                 <strong>Trade-off:</strong> Unlike Kafka streams, Redis Pub/Sub
-                doesn't persist messages. If a subscriber is offline when a
+                doesn&apos;t persist messages. If a subscriber is offline when a
                 message is published, they miss it. This makes it perfect for
                 real-time updates where only the latest state matters.
               </p>
@@ -683,7 +686,9 @@ export default function AsyncProgrammingBlog() {
                 <strong>Ultra-low latency</strong> is critical
               </ListItem>
               <ListItem>All active subscribers should get the update</ListItem>
-              <ListItem>You don't need message persistence or replay</ListItem>
+              <ListItem>
+                You don&apos;t need message persistence or replay
+              </ListItem>
               <ListItem>
                 Real-time notifications, live dashboards, chat systems
               </ListItem>
@@ -704,7 +709,7 @@ export default function AsyncProgrammingBlog() {
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
             All the techniques we saw — <strong>message queues</strong>,{" "}
             <strong>streams</strong>, and <strong>pub-sub</strong> — are not
-            just for performance optimization. They're the core of{" "}
+            just for performance optimization. They&apos;re the core of{" "}
             <strong>event-driven architecture</strong>, which helps in building{" "}
             <strong>scalable and loosely coupled systems</strong>.
           </p>
@@ -716,11 +721,12 @@ export default function AsyncProgrammingBlog() {
 
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-8">
             <h3 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">
-              What's Next?
+              What&apos;s Next?
             </h3>
             <p className="text-blue-800 dark:text-blue-300">
-              In the <strong>next blog</strong>, we'll use these async patterns
-              to <strong> design a real-world Notification System</strong> with
+              In the <strong>next blog</strong>, we&apos;ll use these async
+              patterns to{" "}
+              <strong> design a real-world Notification System</strong> with
               emails, in-app alerts, and retry handling — all using event-driven
               architecture.
             </p>

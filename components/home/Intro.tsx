@@ -1,6 +1,4 @@
-import { Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
-import { Github } from "../icons/GithubIcon";
 
 export default function Intro() {
   return (
