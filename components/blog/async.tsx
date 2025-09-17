@@ -11,7 +11,7 @@ import {
 export default function AsyncProgrammingBlog() {
   return (
     <div className="min-h-screen text-zinc-900 dark:text-zinc-100">
-      <div className="max-w-4xl mx-auto p-6">
+      <div className="max-w-4xl mx-auto md:p-6">
         <div className="mb-12">
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
             Ever waited in a long line to get your work done? You can&apos;t do

@@ -50,7 +50,7 @@ export default function RootLayout({
         />
         <div className="container max-w-3xl mx-auto">
           <Header />
-          <main className="min-h-screen">{children}</main>
+          <main className="min-h-screen px-4 md:px-0">{children}</main>
           <Footer />
           <ScrollToTopButton />
         </div>
