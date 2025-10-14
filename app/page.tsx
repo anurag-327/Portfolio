@@ -1,6 +1,7 @@
 import Avatar from "@/components/home/AvatarHairPin";
 import Intro from "@/components/home/Intro";
 import TechStack from "@/components/home/TechStack";
+import TopBlogs from "@/components/home/TopBlogs";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       </div>
       <Intro />
       <TechStack />
+      <TopBlogs />
     </section>
   );
 }

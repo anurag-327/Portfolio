@@ -15,13 +15,22 @@ export default function BlogHeader({ blog }: { blog: TypeBlog }) {
         <h1 className="text-2xl md:text-4xl font-bold text-center mb-2">
           {blog.title}
         </h1>
-        <p className="text-center font-medium text-zinc-600 dark:text-zinc-400 mb-1">
+        <p className="text-center text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-1">
           by {blog.author}
         </p>
-        <p className="text-center text-sm text-zinc-600 dark:text-zinc-400 mb-1">
+        <p className="text-center text-xs text-zinc-600 dark:text-zinc-400 mb-1">
           {formatDate(blog.date)}
         </p>
       </div>
+      {blog.banner && (
+        <div className="w-full">
+          <img
+            src={blog.banner.src}
+            alt={blog.banner.alt}
+            className="w-full h-auto max-h-[450px] object-contain"
+          />
+        </div>
+      )}
     </div>
   );
 }

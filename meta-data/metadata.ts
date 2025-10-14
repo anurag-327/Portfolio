@@ -1,22 +1,38 @@
 import AsyncProgrammingBlog from "@/components/blog/async";
+import SessionBasedAuthBlog from "@/components/blog/session-based";
 import { JSX } from "react";
 
 export interface TypeBlog {
   title: string;
   description: string;
-  date: string; // in dd/mm/yyyy format
+  date: string;
   slug: string;
-  url: string; // external link if any
+  url: string;
   tags: string[];
   author: string;
   banner: {
     src: string;
     alt: string;
-  };
+  } | null;
   component?: () => JSX.Element;
 }
 
 export const metadata: TypeBlog[] = [
+  {
+    title: "Auth Beyond Tokens: Implementing Session Lifecycle",
+    description:
+      "A practical guide to session-based authentication using Go and Redis.",
+    date: "14/10/2025",
+    slug: "session-based-auth",
+    url: "/blog/session-based-auth",
+    tags: ["session-auth", "redis", "authentication", "backend", "go"],
+    author: "Anurag Srivastav",
+    banner: {
+      src: "/blogs/session-based-auth.jpg",
+      alt: "Session-Based Authentication in Go Banner",
+    },
+    component: SessionBasedAuthBlog,
+  },
   {
     title: "Event Driven Architecture 101: Guide to Async Programming ",
     description: "Event Driven Architecture",
@@ -26,7 +42,7 @@ export const metadata: TypeBlog[] = [
     tags: ["event-driven", "architecture", "async", "programming"],
     author: "Anurag Srivastav",
     banner: {
-      src: "/images/blogs/event-driven-architecture.webp",
+      src: "/blogs/event-driven-architecture.gif",
       alt: "Event-Driven Architecture Banner",
     },
     component: AsyncProgrammingBlog,
@@ -40,10 +56,7 @@ export const metadata: TypeBlog[] = [
     url: "https://knightblogs.hashnode.dev/setting-up-express-server",
     tags: ["express", "nodejs", "backend", "server", "boilerplate"],
     author: "Anurag Srivastav",
-    banner: {
-      src: "/images/blogs/setup-express-server.webp",
-      alt: "Setting Up Express Server",
-    },
+    banner: null,
   },
   {
     title: "Auth with Express & JWT",
@@ -54,9 +67,6 @@ export const metadata: TypeBlog[] = [
     url: "https://knightblogs.hashnode.dev/authentication-with-express-mongodb-and-jsonwebtoken",
     tags: ["authentication", "express", "mongodb", "jwt", "nodejs"],
     author: "Anurag Srivastav",
-    banner: {
-      src: "/images/blogs/auth-express-mongo-jwt.webp",
-      alt: "Authentication with Express, MongoDB, and JWT",
-    },
+    banner: null,
   },
 ];

@@ -27,7 +27,7 @@ export default function BlogListPage() {
               {postsByYear[year].map((post) => (
                 <li
                   key={post.slug}
-                  className="border-b dark:border-zinc-800 group"
+                  className="relative border-b dark:border-zinc-800 group"
                 >
                   <a
                     href={post.url}
@@ -41,6 +41,16 @@ export default function BlogListPage() {
                       {formatDate(post.date)}
                     </time>
                   </a>
+
+                  {post.banner && (
+                    <div className="absolute -top-24 right-4 ml-4 w-44 h-30 overflow-hidden rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <img
+                        src={post.banner.src}
+                        alt={post.banner.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
@@ -51,7 +61,7 @@ export default function BlogListPage() {
   );
 }
 
-function formatDate(dateStr: string) {
+export function formatDate(dateStr: string) {
   const [day, month, year] = dateStr.split("/");
   const date = new Date(Number(year), Number(month) - 1, Number(day));
 
