@@ -1,5 +1,6 @@
 import { TypeBlog } from "@/meta-data/metadata";
-function formatDate(dateStr: string) {
+
+function formaDate(dateStr: string) {
   const [day, month, year] = dateStr.split("/");
   const date = new Date(Number(year), Number(month) - 1, Number(day));
   return date.toLocaleDateString("en-US", {
@@ -19,7 +20,7 @@ export default function BlogHeader({ blog }: { blog: TypeBlog }) {
           by {blog.author}
         </p>
         <p className="text-center text-xs text-zinc-600 dark:text-zinc-400 mb-1">
-          {formatDate(blog.date)}
+          {formaDate(blog.date)}
         </p>
       </div>
       {blog.banner && (

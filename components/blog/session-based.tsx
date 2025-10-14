@@ -23,10 +23,11 @@ export default function SessionBasedAuthBlog() {
           </p>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            Wait… don't just shout your name. How does a website know it's
-            really you? How can it remember you're logged in across multiple
-            requests without asking for your password every single time? How can
-            it prevent account sharing and keep your data secure?
+            Wait… don&apos;t just shout your name. How does a website know
+            it&apos;s really you? How can it remember you&apos;re logged in
+            across multiple requests without asking for your password every
+            single time? How can it prevent account sharing and keep your data
+            secure?
           </p>
 
           <p className="text-zinc-600 dark:text-zinc-400">
@@ -47,9 +48,10 @@ export default function SessionBasedAuthBlog() {
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
             When you visit a website, your browser makes separate HTTP requests
-            for each action. HTTP is <strong>stateless</strong> — it doesn't
-            remember who you are by default. So every time you click a button,
-            the server has no idea if you're the same person who just logged in.
+            for each action. HTTP is <strong>stateless</strong> — it
+            doesn&apos;t remember who you are by default. So every time you
+            click a button, the server has no idea if you&apos;re the same
+            person who just logged in.
           </p>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-6">
@@ -61,8 +63,8 @@ export default function SessionBasedAuthBlog() {
               Option 1: Sessions (Server-Side Memory)
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 mb-3">
-              The server keeps track of who's logged in. When you log in, the
-              server creates a session and gives your browser a small token
+              The server keeps track of who&apos;s logged in. When you log in,
+              the server creates a session and gives your browser a small token
               (usually in a cookie). On your next request, your browser sends
               this token back, and the server looks it up to remember you.
             </p>
@@ -84,20 +86,20 @@ export default function SessionBasedAuthBlog() {
               Option 2: Stateless Tokens (JWT)
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 mb-3">
-              The server doesn't store anything. Instead, it creates a signed
-              token that contains your user information, and you send this token
-              with every request. The server verifies the token's signature to
-              ensure it's real.
+              The server doesn&apos;t store anything. Instead, it creates a
+              signed token that contains your user information, and you send
+              this token with every request. The server verifies the
+              token&apos;s signature to ensure it&apos;s real.
             </p>
             <List className="text-zinc-600 dark:text-zinc-400 mb-3">
               <ListItem>
                 <strong>Best for:</strong> Mobile apps, microservices, or
-                distributed systems where you don't want a central storage
+                distributed systems where you don&apos;t want a central storage
                 point.
               </ListItem>
               <ListItem>
                 <strong>Tradeoff:</strong> Revoking a token is hard — the server
-                can't just delete it. You have to wait for it to expire
+                can&apos;t just delete it. You have to wait for it to expire
                 naturally.
               </ListItem>
             </List>
@@ -105,15 +107,15 @@ export default function SessionBasedAuthBlog() {
 
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 md:p-6 mb-6">
             <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">
-              Why We're Using Sessions in This Tutorial
+              Why We&apos;re Using Sessions in This Tutorial
             </h4>
             <p className="text-blue-700 dark:text-blue-400">
-              We're building a traditional web application where the server
+              We&apos;re building a traditional web application where the server
               controls everything. Sessions give us instant logout (crucial if
-              someone's account is compromised), per-device tracking (know which
-              devices a user is logged in from), and the ability to enforce
-              rules like "max 5 active sessions per user." If your app needs
-              these guarantees, sessions are the way to go.
+              someone&apos;s account is compromised), per-device tracking (know
+              which devices a user is logged in from), and the ability to
+              enforce rules like &quot;max 5 active sessions per user.&quot; If
+              your app needs these guarantees, sessions are the way to go.
             </p>
           </div>
 
@@ -122,14 +124,14 @@ export default function SessionBasedAuthBlog() {
           </h3>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            Imagine you're logging into your Gmail account. You enter your email
-            and password. The server checks these are correct, then creates a
-            session and puts a session ID in a cookie. Your browser
-            automatically sends this cookie on every request to Gmail. Gmail's
-            server checks the session ID against its records, finds you, and
-            shows your emails. When you click logout, Gmail deletes the session
-            immediately — you're instantly logged out everywhere. That's
-            sessions in action.
+            Imagine you&apos;re logging into your Gmail account. You enter your
+            email and password. The server checks these are correct, then
+            creates a session and puts a session ID in a cookie. Your browser
+            automatically sends this cookie on every request to Gmail.
+            Gmail&apos;s server checks the session ID against its records, finds
+            you, and shows your emails. When you click logout, Gmail deletes the
+            session immediately — you&apos;re instantly logged out everywhere.
+            That&apos;s sessions in action.
           </p>
         </section>
 
@@ -148,7 +150,7 @@ export default function SessionBasedAuthBlog() {
                 <code className="inline px-1 py-0.5 text-sm bg-zinc-100 dark:bg-zinc-800 rounded">
                   docker run -d -p 6379:6379 redis
                 </code>
-                ) — Redis is a fast, in-memory data store we'll use to save
+                ) — Redis is a fast, in-memory data store we&apos;ll use to save
                 session information
               </ListItem>
               <ListItem>
@@ -161,15 +163,15 @@ export default function SessionBasedAuthBlog() {
           </div>
         </section>
 
-        {/* What You'll Build */}
+        {/* What You&apos;ll Build */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-200">
-            What We'll Build
+            What We&apos;ll Build
           </h2>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            By the end of this tutorial, we'll have a complete session-based
-            auth system that can:
+            By the end of this tutorial, we&apos;ll have a complete
+            session-based auth system that can:
           </p>
 
           <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 md:p-6">
@@ -199,7 +201,7 @@ export default function SessionBasedAuthBlog() {
             <strong className="text-zinc-900 dark:text-zinc-200">
               server keeps track of user login state
             </strong>
-            . Here's the flow:
+            . Here&apos;s the flow:
           </p>
 
           <List className="mb-6">
@@ -225,7 +227,7 @@ export default function SessionBasedAuthBlog() {
             </ListItem>
             <ListItem>
               The server validates the SID for each request to confirm the
-              user's identity
+              user&apos;s identity
             </ListItem>
           </List>
 
@@ -268,7 +270,7 @@ export default function SessionBasedAuthBlog() {
             </OrderedListItem>
             <OrderedListItem>
               Server reads the cookie, looks up the session in Redis, and
-              confirms the user's identity
+              confirms the user&apos;s identity
             </OrderedListItem>
           </OrderedList>
         </section>
@@ -281,8 +283,8 @@ export default function SessionBasedAuthBlog() {
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
             Redis is like a super-fast in-memory database. We use it to store
-            sessions because they're temporary — they expire and get deleted.
-            Here's what we store:
+            sessions because they&apos;re temporary — they expire and get
+            deleted. Here&apos;s what we store:
           </p>
 
           <div className="mb-8">
@@ -309,7 +311,7 @@ export default function SessionBasedAuthBlog() {
 
           <div className="mb-8">
             <h3 className="text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-200">
-              2. User's Active Sessions (
+              2. User&apos;s Active Sessions (
               <code className="inline px-1 py-0.5 text-sm bg-zinc-100 dark:bg-zinc-800 rounded">
                 user_sessions:&lt;userId&gt;
               </code>
@@ -348,8 +350,8 @@ export default function SessionBasedAuthBlog() {
                 lets us see all devices a user is logged in on
               </ListItem>
               <ListItem>
-                This setup makes it easy to enforce rules like "max 5 active
-                sessions" by deleting the oldest ones
+                This setup makes it easy to enforce rules like &quot;max 5
+                active sessions&quot; by deleting the oldest ones
               </ListItem>
             </List>
           </div>
@@ -363,7 +365,7 @@ export default function SessionBasedAuthBlog() {
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-6">
             Sessions are valuable targets for attackers. If someone steals your
-            session cookie, they can impersonate you. Here's how we protect
+            session cookie, they can impersonate you. Here&apos;s how we protect
             against common attacks:
           </p>
 
@@ -379,15 +381,16 @@ export default function SessionBasedAuthBlog() {
               <strong>The Problem:</strong> JavaScript running on a website
               (including malicious scripts from ads or hacked third-party code)
               can read cookies. If it can read your session cookie, it can send
-              it to an attacker's server.
+              it to an attacker&apos;s server.
             </p>
             <p className="text-zinc-600 dark:text-zinc-400 mb-3">
               <strong>The Solution:</strong> Set{" "}
               <code className="inline px-1 py-0.5 text-sm bg-zinc-100 dark:bg-zinc-800 rounded">
                 HttpOnly: true
               </code>{" "}
-              on the cookie. This tells the browser: "Only send this cookie
-              automatically with HTTP requests. JavaScript cannot access it."
+              on the cookie. This tells the browser: &quot;Only send this cookie
+              automatically with HTTP requests. JavaScript cannot access
+              it.&quot;
             </p>
           </div>
 
@@ -409,8 +412,8 @@ export default function SessionBasedAuthBlog() {
               <code className="inline px-1 py-0.5 text-sm bg-zinc-100 dark:bg-zinc-800 rounded">
                 Secure: true
               </code>{" "}
-              on the cookie. This tells the browser: "Only send this cookie over
-              HTTPS (encrypted connections)."
+              on the cookie. This tells the browser: &quot;Only send this cookie
+              over HTTPS (encrypted connections).&quot;
             </p>
           </div>
 
@@ -424,19 +427,20 @@ export default function SessionBasedAuthBlog() {
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 mb-3">
               <strong>The Problem (CSRF — Cross-Site Request Forgery):</strong>{" "}
-              Imagine you're logged into your bank's website. You then visit a
-              malicious website. That site has hidden code that makes a request
-              to your bank's website (like "transfer $1000"). Since your browser
-              has your bank's session cookie, it sends it automatically, and the
-              bank thinks you approved the transfer.
+              Imagine you&apos;re logged into your bank&apos;s website. You then
+              visit a malicious website. That site has hidden code that makes a
+              request to your bank&apos;s website (like &quot;transfer
+              $1000&quot;). Since your browser has your bank&apos;s session
+              cookie, it sends it automatically, and the bank thinks you
+              approved the transfer.
             </p>
             <p className="text-zinc-600 dark:text-zinc-400 mb-3">
               <strong>The Solution:</strong> Set{" "}
               <code className="inline px-1 py-0.5 text-sm bg-zinc-100 dark:bg-zinc-800 rounded">
                 SameSite: Strict
               </code>{" "}
-              . This tells the browser: "Only send this cookie if the request
-              comes from the same website."
+              . This tells the browser: &quot;Only send this cookie if the
+              request comes from the same website.&quot;
             </p>
           </div>
 
@@ -453,9 +457,9 @@ export default function SessionBasedAuthBlog() {
   SameSite: http.SameSiteStrictMode,  // Only sent to our site (prevents CSRF)
 })`}</Code>
             <p className="text-zinc-600 dark:text-zinc-400 mt-3">
-              This creates a cookie that's highly resistant to theft. An
+              This creates a cookie that&apos;s highly resistant to theft. An
               attacker would need to either compromise HTTPS, trick you into
-              visiting a malicious site, or directly access your browser's
+              visiting a malicious site, or directly access your browser&apos;s
               storage — all very difficult.
             </p>
           </div>
@@ -481,7 +485,7 @@ export default function SessionBasedAuthBlog() {
           </p>
 
           <h3 className="text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-200">
-            What We'll Implement
+            What We&apos;ll Implement
           </h3>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -500,10 +504,10 @@ export default function SessionBasedAuthBlog() {
         <section className="mb-12">
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 md:p-6">
             <h3 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">
-              What's Next?
+              What&apos;s Next?
             </h3>
             <p className="text-blue-800 dark:text-blue-300 mb-4">
-              In the next sections, we'll dive into the code and build:
+              In the next sections, we&apos;ll dive into the code and build:
             </p>
             <OrderedList className="text-blue-800 dark:text-blue-300">
               <OrderedListItem>
@@ -531,8 +535,8 @@ export default function SessionBasedAuthBlog() {
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
             The login endpoint is responsible for verifying user credentials and
-            creating a session upon success. Here's how our handler looks using{" "}
-            <strong>Gin</strong>:
+            creating a session upon success. Here&apos;s how our handler looks
+            using <strong>Gin</strong>:
           </p>
 
           <Code>{`func LoginHandler(c *gin.Context) {
@@ -580,8 +584,9 @@ export default function SessionBasedAuthBlog() {
           </List>
 
           <p className="text-zinc-600 dark:text-zinc-400">
-            The real magic happens inside <code>CreateSession</code> — that's
-            where the session is generated, stored, and the cookie is set.
+            The real magic happens inside <code>CreateSession</code> —
+            that&apos;s where the session is generated, stored, and the cookie
+            is set.
           </p>
         </section>
 
@@ -711,7 +716,7 @@ func AddSessionToUser(ctx context.Context, userID uint, sessionID string) error 
               <code>SessionMaxAge</code>
             </OrderedListItem>
             <OrderedListItem>
-              Link this session to the user's session set using{" "}
+              Link this session to the user&apos;s session set using{" "}
               <code>AddSessionToUser</code>
             </OrderedListItem>
             <OrderedListItem>
@@ -719,7 +724,7 @@ func AddSessionToUser(ctx context.Context, userID uint, sessionID string) error 
             </OrderedListItem>
             <OrderedListItem>
               Finally, set a secure <strong>HTTP-only cookie</strong> that
-              stores the session ID in the client's browser
+              stores the session ID in the client&apos;s browser
             </OrderedListItem>
           </OrderedList>
 
@@ -759,7 +764,7 @@ func AddSessionToUser(ctx context.Context, userID uint, sessionID string) error 
             </h3>
             <p className="text-blue-800 dark:text-blue-300 mb-4">
               Now that we can create sessions and issue cookies, the next step
-              is to verify them on every request. We'll use{" "}
+              is to verify them on every request. We&apos;ll use{" "}
               <strong>two middlewares</strong>:
             </p>
             <ul className="list-disc pl-5 text-blue-800 dark:text-blue-300 mb-4">
@@ -769,16 +774,17 @@ func AddSessionToUser(ctx context.Context, userID uint, sessionID string) error 
               </li>
               <li>
                 <strong>Session Refresh Middleware:</strong> Updates the
-                session's <code>LastAccessedAt</code> timestamp on every
-                request, even for routes that don't require authentication. This
-                keeps the session alive while the user is actively using the app
+                session&apos;s <code>LastAccessedAt</code> timestamp on every
+                request, even for routes that don&apos;t require authentication.
+                This keeps the session alive while the user is actively using
+                the app
               </li>
             </ul>
             <p className="text-blue-800 dark:text-blue-300">
-              Some APIs don't require full auth checks but still want to refresh
-              the session's last accessed timestamp to prevent it from expiring.
-              This way, we can keep sessions active without forcing a login for
-              every non-sensitive request.
+              Some APIs don&apos;t require full auth checks but still want to
+              refresh the session&apos;s last accessed timestamp to prevent it
+              from expiring. This way, we can keep sessions active without
+              forcing a login for every non-sensitive request.
             </p>
           </div>
         </section>
@@ -850,7 +856,7 @@ func AddSessionToUser(ctx context.Context, userID uint, sessionID string) error 
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 mb-4">
               Keeps sessions alive by updating the <code>LastAccessedAt</code>{" "}
-              timestamp. Useful for routes that don't require strict
+              timestamp. Useful for routes that don&apos;t require strict
               authentication.
             </p>
 
@@ -934,8 +940,8 @@ func RefreshCookie(c *gin.Context, sessionID string) {
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
             Managing active sessions involves two key tasks: removing expired
             sessions (<strong>cleanup</strong>) and limiting the number of
-            active sessions per user (<strong>pruning</strong>). Let's explore
-            why we made specific design decisions.
+            active sessions per user (<strong>pruning</strong>). Let&apos;s
+            explore why we made specific design decisions.
           </p>
 
           <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 md:p-6 mb-6">
@@ -996,9 +1002,9 @@ func RefreshCookie(c *gin.Context, sessionID string) {
           </h2>
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-            To keep a user's session list accurate and enforce limits, we use
-            two helper functions: <code>CleanupUserExpiredSessions</code> and{" "}
-            <code>PruneExcessSessions</code>.
+            To keep a user&apos;s session list accurate and enforce limits, we
+            use two helper functions: <code>CleanupUserExpiredSessions</code>{" "}
+            and <code>PruneExcessSessions</code>.
           </p>
 
           <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 md:p-6 mb-6">
@@ -1006,9 +1012,9 @@ func RefreshCookie(c *gin.Context, sessionID string) {
               CleanupUserExpiredSessions
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-              Iterates through a user's session IDs and removes any that have
-              expired in Redis. This ensures the session list stays clean even
-              if login fails.
+              Iterates through a user&apos;s session IDs and removes any that
+              have expired in Redis. This ensures the session list stays clean
+              even if login fails.
             </p>
 
             <Code>{`func CleanupUserExpiredSessions(userID uint) error {
@@ -1097,8 +1103,8 @@ func RefreshCookie(c *gin.Context, sessionID string) {
 
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
             Logging out a user involves clearing the session data from Redis,
-            removing the session ID from the user's active session list, and
-            deleting the browser cookie.
+            removing the session ID from the user&apos;s active session list,
+            and deleting the browser cookie.
           </p>
 
           <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 md:p-6 mb-6">
@@ -1130,7 +1136,7 @@ func RefreshCookie(c *gin.Context, sessionID string) {
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 mb-4">
               Removes session data from Redis and removes the session ID from
-              the user's set of active sessions.
+              the user&apos;s set of active sessions.
             </p>
 
             <Code>{`func ClearSession(ctx context.Context, sessionID string) error {
@@ -1156,7 +1162,7 @@ func ClearSessionFromUserSessions(ctx context.Context, userID uint, sessionID st
             </h3>
             <p className="text-zinc-600 dark:text-zinc-400 mb-4">
               Handles the full logout process: clears session data, removes
-              session ID from user's list, and deletes the browser cookie.
+              session ID from user&apos;s list, and deletes the browser cookie.
             </p>
 
             <Code>{`func LogoutSession(c *gin.Context) error {
@@ -1185,7 +1191,7 @@ func ClearSessionFromUserSessions(ctx context.Context, userID uint, sessionID st
           </div>
 
           <p className="text-zinc-600 dark:text-zinc-400">
-            This ensures that the user's session is fully terminated both
+            This ensures that the user&apos;s session is fully terminated both
             server-side and client-side, providing a clean and secure logout
             experience.
           </p>
@@ -1212,7 +1218,10 @@ func ClearSessionFromUserSessions(ctx context.Context, userID uint, sessionID st
               <li>
                 Logout from all sessions — useful if an account is compromised
               </li>
-              <li>Extend session expiration — "keep me logged in" feature</li>
+              <li>
+                Extend session expiration — &quot;keep me logged in&quot;
+                feature
+              </li>
               <li>
                 Notify users on new login — email or push notification for new
                 devices
@@ -1244,7 +1253,7 @@ func ClearSessionFromUserSessions(ctx context.Context, userID uint, sessionID st
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
             The goal is to keep sessions secure, give users control, and make
             your system flexible. You can combine these features or come up with
-            new ideas depending on your app's requirements.
+            new ideas depending on your app&apos;s requirements.
           </p>
 
           <p className="text-zinc-600 dark:text-zinc-400">

@@ -1,6 +1,17 @@
-import { formatDate } from "@/app/blog/page";
 import { metadata } from "@/meta-data/metadata";
-import { Notebook, Zap } from "lucide-react";
+import { Notebook } from "lucide-react";
+
+function formatDate(dateStr: string): string {
+  const [day, month, year] = dateStr.split("/");
+  const date = new Date(Number(year), Number(month) - 1, Number(day));
+
+  return date
+    .toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+    })
+    .toUpperCase();
+}
 
 export default function TopBlogs() {
   return (

@@ -61,7 +61,7 @@ export default function BlogListPage() {
   );
 }
 
-export function formatDate(dateStr: string) {
+function formatDate(dateStr: string): string {
   const [day, month, year] = dateStr.split("/");
   const date = new Date(Number(year), Number(month) - 1, Number(day));
 
