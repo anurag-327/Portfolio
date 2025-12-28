@@ -152,8 +152,8 @@ export default function ProjectsPage() {
 
                                 <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800/50 mt-auto">
                                     <div className="flex flex-wrap gap-2">
-                                        {project.stack &&
-                                            project.stack
+                                        {project.toolsused &&
+                                            project.toolsused
                                                 .split(",")
                                                 .slice(0, 3)
                                                 .map((tech, i) => (

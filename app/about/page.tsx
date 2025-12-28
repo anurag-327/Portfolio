@@ -18,10 +18,34 @@ export default function AboutPage() {
       </div>
 
       <div className="space-y-12">
+        {/* Currently Building */}
+        <section>
+          <h2 className="text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-200">
+            Current Focus: Neuron
+          </h2>
+          <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+            I&apos;m currently building <strong>Neuron</strong>, a secure remote code execution infrastructure. It handles untrusted code execution across multiple languages primarily for competitive programming platforms.
+          </p>
+          <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+            It&apos;s an engineering playground where I&apos;m solving deep systems challenges—from architecting warm/cold container pools to optimizing kernel-level resource isolation. I&apos;m currently in the third phase of optimization, pushing latency down to the bare minimum.
+          </p>
+          <a
+            href="https://neuron-dev.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-800 dark:text-zinc-200 font-medium hover:underline inline-flex items-center gap-1"
+          >
+            Check out Neuron
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </section>
+
         {/* Work Experience */}
         <section>
           <h2 className="text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-200">
-            Founding Engineer @ Codolio
+            Founding Engineer @ <a href="https://codolio.com/" target="_blank" rel="noopener noreferrer">Codolio</a>
           </h2>
           <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
             I currently serve as a <strong>Founding Engineer at Codolio</strong>, where I manage the entire lifecycle of the platform. From designing the frontend and architecting the backend to handling deployments and building browser extensions, I own the stack end-to-end.
@@ -34,10 +58,16 @@ export default function AboutPage() {
             Node.js to Go: A Love Story
           </h2>
           <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
-            For years, <strong>Node.js</strong> was my hammer, and everything looked like a nail. It&apos;s flexible, fast enough for most things, and the ecosystem is massive. But as I started building more complex, performance-critical systems, I hit walls—garbage collection pauses, dynamic typing issues, and concurrency headaches.
+            Node.js was my go-to for a long time. It was familiar, flexible, and got the job done, so I stuck with it.
+          </p>
+          <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+            At some point, I wanted to learn Go. And the best way I know to learn a language is simple — actually build things with it. So I started using Go for backend work.
+          </p>
+          <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+            Since then, Go slowly became my favorite. I liked how simple and predictable it felt, how easy concurrency was with goroutines, and how confident I felt shipping backend code.
           </p>
           <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Then I found <strong>Go</strong>. It wasn&apos;t just a language switch; it was a mindset shift. The simplicity, the raw performance, and the concurrency model (goroutines &lt;3) completely changed how I architect software. Now, I write robust, type-safe distributed systems that just <em>work</em>.
+            Today, Go is my primary backend language — not because Node was bad, but because Go just felt right.
           </p>
         </section>
 
@@ -47,7 +77,7 @@ export default function AboutPage() {
             Why buy when you can build?
           </h2>
           <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
-            I don&apos;t just build tutorial apps. I build the infrastructure I need for my own digital existence. If I need a tool, my first instinct isn&apos;t to find a SaaS—it&apos;s to open my IDE.
+            I don&apos;t just build tutorial apps. I build the stuffs, I need for my own digital existence. If I need a tool, my first instinct isn&apos;t to find a SaaS—it&apos;s to open my IDE.
           </p>
 
           <div className="grid gap-6">
@@ -83,7 +113,7 @@ export default function AboutPage() {
                 Custom Analytics Logger
               </h3>
               <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                I wanted to know who visits my site without handing data to Google. So I built a high-throughput logging service (using Go &amp; Redis) tailored exactly to my metrics.
+                I wanted to know who visits my site without handing data to Google. So I built a high-throughput logging service (using Supabase) tailored exactly to my metrics.
               </p>
             </div>
           </div>

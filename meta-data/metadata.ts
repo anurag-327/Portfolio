@@ -17,11 +17,13 @@ export interface TypeBlog {
     alt: string;
   } | null;
   component?: () => JSX.Element;
+  minsRead?: number;
+  domain?: string;
 }
 
 export const metadata: TypeBlog[] = [
   {
-    title: "From System Freeze to 250ms: How I Engineered a Scalable Remote Code Runner",
+    title: "From System Freeze to 250ms: Building a Scalable Code Runner",
     description:
       "The story of how I crashed my own server, successfully engineered my way out of it, and cut execution time from 2.5 seconds to 250ms.",
     date: "28/12/2025",
@@ -33,6 +35,8 @@ export const metadata: TypeBlog[] = [
       src: "/blogs/scalable-code-runner.png",
       alt: "Scalable Code Runner Banner",
     },
+    minsRead: 10,
+    domain: "Engineering",
     component: ScalableCodeRunnerBlog,
   },
   {
@@ -48,7 +52,9 @@ export const metadata: TypeBlog[] = [
       src: "/blogs/session-based-auth.jpg",
       alt: "Session-Based Authentication in Go Banner",
     },
+    domain: "Backend",
     component: SessionBasedAuthBlog,
+    minsRead: 20,
   },
   {
     title: "Event Driven Architecture 101: Guide to Async Programming ",
@@ -62,7 +68,9 @@ export const metadata: TypeBlog[] = [
       src: "/blogs/event-driven-architecture.gif",
       alt: "Event-Driven Architecture Banner",
     },
+    domain: "Backend",
     component: AsyncProgrammingBlog,
+    minsRead: 10,
   },
   {
     title: "My Journey at Codolio: From Intern to Founding Engineer",
@@ -77,6 +85,8 @@ export const metadata: TypeBlog[] = [
       src: "/blogs/codolio-journey.png",
       alt: "Codolio Journey",
     },
+    minsRead: 5,
+    domain: "Journey",
     component: CodolioJourneyBlog,
   },
   {

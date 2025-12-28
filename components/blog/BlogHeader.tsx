@@ -1,6 +1,6 @@
 import { TypeBlog } from "@/meta-data/metadata";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Calendar, Clock } from "lucide-react";
 
 function formaDate(dateStr: string) {
   const [day, month, year] = dateStr.split("/");
@@ -15,24 +15,32 @@ function formaDate(dateStr: string) {
 export default function BlogHeader({ blog }: { blog: TypeBlog }) {
   return (
     <div className="max-w-2xl mx-auto mt-12 mb-10 px-0">
-      <Link
-        href="/blog"
-        className="inline-flex items-center gap-2 text-sm text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors mb-8 group"
-      >
-        <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-        Back to writing
-      </Link>
-
       <div className="space-y-6">
         <div className="space-y-4">
-          <div className="flex items-center gap-3 text-sm text-zinc-500 dark:text-zinc-400">
-            <time dateTime={blog.date}>{formaDate(blog.date)}</time>
-            <span>•</span>
-            <span>{blog.author}</span>
+          <div className="flex items-center gap-4 text-xs font-medium text-blue-400 mb-6">
+            {blog.domain && (
+              <span className="bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">
+                {blog.domain}
+              </span>
+            )}
+            {blog.minsRead && (
+              <span className="flex items-center gap-1.5 text-zinc-500">
+                <Clock size={14} />
+                {blog.minsRead} min read
+              </span>
+            )}
+            <span className="flex items-center gap-1.5 text-zinc-500">
+              <Calendar size={14} />
+              <time dateTime={blog.date}>{formaDate(blog.date)}</time>
+            </span>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-            {blog.title}
+          <h1 className="text-3xl md:text-5xl font-bold text-black dark:text-white tracking-tight mb-6 leading-[40px]">
+            <span>{blog.title.split(":")[0]}</span>{" "}
+            <br className="hidden md:block" />
+            <span className="text-transparent mt-4 bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {blog.title.split(":")[1]}
+            </span>
           </h1>
         </div>
 

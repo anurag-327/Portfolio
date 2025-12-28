@@ -1,59 +1,60 @@
 import { metadata } from "@/meta-data/metadata";
-import { Notebook } from "lucide-react";
-
-function formatDate(dateStr: string): string {
-  const [day, month, year] = dateStr.split("/");
-  const date = new Date(Number(year), Number(month) - 1, Number(day));
-
-  return date
-    .toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-    })
-    .toUpperCase();
-}
+import { Clock, Notebook } from "lucide-react";
+import Link from "next/link";
 
 export default function TopBlogs() {
-  return (
-    <div className=" space-y-4 p-4">
-      <div className="flex items-center gap-2">
-        <Notebook className="size-4" />
-        <h2 className="font-medium bg-gradient-to-r from-black to-gray-600 dark:from-white dark:to-gray-500 text-transparent bg-clip-text text-muted-foreground">
-          Top Blogs
-        </h2>
-      </div>
-      <ul>
-        {metadata.slice(0, 3).map((post, index) => (
-          <li
-            key={post.slug}
-            className={`relative ${index != 1 && "border-b"
-              } dark:border-zinc-800 group`}
-          >
-            <a
-              href={post.url}
-              target={post.url.startsWith("/") ? "_self" : "_blank"}
-              className="flex w-full p-5 gap-4 justify-between items-center text-sm flex-1 font-medium text-zinc-600 dark:text-zinc-400 tracking-wide transition-all duration-300 ease-in-out group-hover:text-blue-600 dark:group-hover:text-blue-300"
-            >
-              <div className="flex-1">
-                <span className="whitespace-pre-wrap">{post.title}</span>
-              </div>
-              <time className="font-mono whitespace-nowrap">
-                {formatDate(post.date)}
-              </time>
-            </a>
+  const latestBlogs = metadata.slice(0, 4);
 
-            {post.banner && (
-              <div className="absolute -top-24 right-4 ml-4 w-44 h-30 overflow-hidden rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <img
-                  src={post.banner.src}
-                  alt={post.banner.alt}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-          </li>
+  return (
+    <div className="space-y-4 p-4">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <Notebook className="size-4" />
+          <h2 className="font-medium bg-gradient-to-r from-black to-gray-600 dark:from-white dark:to-gray-500 text-transparent bg-clip-text text-muted-foreground">
+            From the Blog
+          </h2>
+        </div>
+        <Link
+          href="/blog"
+          className="text-xs text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-200 transition-colors"
+        >
+          View all →
+        </Link>
+      </div>
+
+      <div className="flex flex-col">
+        {latestBlogs.map((post, i) => (
+          <Link
+            key={post.slug}
+            href={post.url}
+            target={post.url.startsWith("/") ? "_self" : "_blank"}
+            className={`group block py-6 ${i !== latestBlogs.length - 1 ? "border-b border-zinc-100 dark:border-zinc-800" : ""
+              }`}
+          >
+            <div className="flex items-center gap-3 mb-3">
+              <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 text-[10px] font-bold uppercase tracking-wider">
+                {post.domain || "Tech"}
+              </span>
+              <span className="text-xs text-zinc-500 font-mono">
+                {post.date}
+              </span>
+            </div>
+
+            <h3 className="font-bold text-lg text-zinc-900 dark:text-zinc-100 group-hover:text-blue-300 dark:group-hover:text-blue-400 transition-colors mb-2">
+              {post.title}
+            </h3>
+
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 mb-3">
+              {post.description}
+            </p>
+
+            <div className="flex items-center gap-2 text-xs text-zinc-400 dark:text-zinc-500 font-medium">
+              <Clock className="w-3 h-3" />
+              {post.minsRead ? `${post.minsRead} min read` : "5 min read"}
+            </div>
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
