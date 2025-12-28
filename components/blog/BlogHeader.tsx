@@ -1,6 +1,5 @@
 import { TypeBlog } from "@/meta-data/metadata";
-import Link from "next/link";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 
 function formaDate(dateStr: string) {
   const [day, month, year] = dateStr.split("/");
