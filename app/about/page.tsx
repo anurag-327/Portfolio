@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="max-w-2xl mx-auto my-16 mt-24 px-6 md:px-0">
+    <section className="max-w-2xl mx-auto my-16 mt-24 ">
       <div className="mb-12">
         <h1 className="text-3xl font-bold mb-6 text-zinc-900 dark:text-zinc-100">
           I build the tools I wish I had.
