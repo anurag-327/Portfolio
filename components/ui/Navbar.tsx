@@ -27,7 +27,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center justify-between w-full gap-8">
+    <nav className="flex items-center justify-between w-full gap-4 md:gap-8">
       {navItems.map(({ name, href }) => (
         <Link
           key={name}

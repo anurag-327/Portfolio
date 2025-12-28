@@ -20,7 +20,7 @@ export default function BlogListPage() {
   );
 
   return (
-    <div className="max-w-2xl mx-auto mt-16 mb-24 px-6 md:px-0">
+    <div className="max-w-2xl mx-auto mt-16 mb-24 md:px-0">
       <header className="mb-16">
         <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-4">
           Writing
@@ -44,8 +44,8 @@ export default function BlogListPage() {
                   href={post.url}
                   target={post.url.startsWith("/") ? "_self" : "_blank"}
                   className={`group block py-6 ${i !== postsByYear[year].length - 1
-                      ? "border-b border-zinc-100 dark:border-zinc-800"
-                      : ""
+                    ? "border-b border-zinc-100 dark:border-zinc-800"
+                    : ""
                     }`}
                 >
                   <div className="flex items-center gap-3 mb-3">

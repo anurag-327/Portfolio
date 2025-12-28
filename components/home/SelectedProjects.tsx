@@ -30,7 +30,7 @@ const FEATURED_PROJECTS = [
 
 export default function SelectedProjects() {
     return (
-        <div className="space-y-4 p-4">
+        <div className="space-y-4 md:p-4">
             <div className="flex items-center gap-2 justify-between">
                 <div className="flex items-center gap-2">
                     <FolderGit2 className="size-4" />

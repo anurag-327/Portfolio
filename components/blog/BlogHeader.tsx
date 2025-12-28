@@ -16,7 +16,7 @@ export default function BlogHeader({ blog }: { blog: TypeBlog }) {
     <div className="max-w-2xl mx-auto mt-12 mb-10 px-0">
       <div className="space-y-6">
         <div className="space-y-4">
-          <div className="flex items-center gap-4 text-xs font-medium text-blue-400 mb-6">
+          <div className="flex flex-wrap items-center gap-4 text-xs font-medium text-blue-400 mb-6">
             {blog.domain && (
               <span className="bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-full">
                 {blog.domain}
