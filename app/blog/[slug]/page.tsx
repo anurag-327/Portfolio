@@ -12,10 +12,12 @@ export default async function Page({
   const blog = metadata.find((item) => item.slug === slug);
   if (!blog || !blog.component) notFound();
   return (
-    <div className="my-16 space-y-6">
+    <section className="max-w-2xl mx-auto my-16">
       <BlogHeader blog={blog} />
-      {blog.component()}
-    </div>
+      <div className="prose prose-zinc dark:prose-invert max-w-none">
+        {blog.component()}
+      </div>
+    </section>
   );
 }
 

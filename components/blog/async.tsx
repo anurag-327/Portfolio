@@ -7,11 +7,12 @@ import {
   OrderedList,
   OrderedListItem,
 } from "./component";
+import InfoBox from "./InfoBox";
 
 export default function AsyncProgrammingBlog() {
   return (
-    <div className="min-h-screen text-zinc-900 dark:text-zinc-100">
-      <div className="max-w-4xl mx-auto md:p-6">
+    <div>
+      <div className="">
         <div className="mb-12">
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
             Ever waited in a long line to get your work done? You can&apos;t do
@@ -59,17 +60,14 @@ export default function AsyncProgrammingBlog() {
             </OrderedListItem>
           </OrderedList>
 
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-6">
-            <h4 className="font-semibold mb-3 text-zinc-900 dark:text-zinc-200">
-              Problems:
-            </h4>
+          <InfoBox variant="warning" title="Problems:">
             <List>
               <ListItem>Every table must wait for the previous one</ListItem>
               <ListItem>Long waiting times</ListItem>
               <ListItem>Poor customer experience</ListItem>
               <ListItem>You&apos;re not using your time efficiently</ListItem>
             </List>
-          </div>
+          </InfoBox>
 
           <p className="text-zinc-600 dark:text-zinc-400 mt-4">
             This is exactly what{" "}
@@ -108,12 +106,8 @@ export default function AsyncProgrammingBlog() {
             </OrderedListItem>
           </OrderedList>
 
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-6">
-            <h4 className="font-semibold mb-3 text-zinc-900 dark:text-zinc-200">
-              Benefits:
-            </h4>
-
-            <List className="mb-4">
+          <InfoBox variant="success" title="Benefits:">
+            <List className="mb-0">
               <ListItem>
                 Orders are <strong>processed in parallel</strong>
               </ListItem>
@@ -123,7 +117,7 @@ export default function AsyncProgrammingBlog() {
               </ListItem>
               <ListItem>Much smoother experience</ListItem>
             </List>
-          </div>
+          </InfoBox>
         </section>
 
         <section className="mb-12">
@@ -145,12 +139,8 @@ export default function AsyncProgrammingBlog() {
             .
           </p>
 
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold mb-3 text-zinc-900 dark:text-zinc-200">
-              Assumptions:
-            </h4>
-
-            <List className="mb-4">
+          <InfoBox title="Assumptions:">
+            <List className="mb-0">
               <ListItem>
                 You need to send emails to <strong>100 users</strong>
               </ListItem>
@@ -159,7 +149,7 @@ export default function AsyncProgrammingBlog() {
                 network delay)
               </ListItem>
             </List>
-          </div>
+          </InfoBox>
 
           {/* Synchronous Way */}
           <div className="mb-8">
@@ -175,11 +165,8 @@ export default function AsyncProgrammingBlog() {
 }`}
             </Code>
 
-            <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6">
-              <h4 className="font-semibold mb-3 text-red-900 dark:text-red-200">
-                Problems with This Approach:
-              </h4>
-              <ul className="space-y-1 text-red-800 dark:text-red-300">
+            <InfoBox variant="error" title="Problems with This Approach:">
+              <ul className="space-y-1">
                 <li>
                   • Sends <strong>one email at a time</strong>
                 </li>
@@ -192,7 +179,7 @@ export default function AsyncProgrammingBlog() {
                   • <strong>Slow</strong> and <strong>not scalable</strong>
                 </li>
               </ul>
-            </div>
+            </InfoBox>
           </div>
 
           {/* Async Way */}
@@ -206,11 +193,8 @@ export default function AsyncProgrammingBlog() {
   await Promise.all(promises);
 }`}</Code>
 
-            <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6">
-              <h4 className="font-semibold mb-3 text-green-900 dark:text-green-200">
-                Benefits of This Approach:
-              </h4>
-              <List className="mb-4 text-green-800 dark:text-green-300">
+            <InfoBox variant="success" title="Benefits of This Approach:">
+              <List className="mb-0">
                 <ListItem>
                   All emails are sent <strong>in parallel</strong>
                 </ListItem>
@@ -226,7 +210,7 @@ export default function AsyncProgrammingBlog() {
                   <strong>Scalable</strong> for thousands of users
                 </ListItem>
               </List>
-            </div>
+            </InfoBox>
           </div>
         </section>
 
@@ -330,12 +314,8 @@ export default function AsyncProgrammingBlog() {
             />
           </div>
 
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold mb-3 text-zinc-900 dark:text-zinc-200">
-              How Message Queues Help in Async Programming:
-            </h4>
-
-            <List className="mb-4 text-zinc-600 dark:text-zinc-400">
+          <InfoBox title="How Message Queues Help in Async Programming:">
+            <List className="mb-0">
               <ListItem>
                 <strong>Decouple components</strong> — The API doesn&apos;t wait
                 for task completion
@@ -355,7 +335,7 @@ export default function AsyncProgrammingBlog() {
                 <strong>Monitor jobs</strong> — Track what failed/succeeded
               </ListItem>
             </List>
-          </div>
+          </InfoBox>
 
           <div className="mb-6">
             <h4 className="font-semibold mb-3 text-zinc-900 dark:text-zinc-200">
@@ -384,11 +364,8 @@ export default function AsyncProgrammingBlog() {
             </OrderedList>
           </div>
 
-          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6">
-            <h4 className="font-semibold mb-3 text-green-900 dark:text-green-200">
-              Benefits:
-            </h4>
-            <List className="mb-4 text-green-800 dark:text-green-300">
+          <InfoBox variant="success" title="Benefits:">
+            <List className="mb-0">
               <ListItem>
                 <strong>Non-blocking</strong>: API responds instantly — no delay
                 for users
@@ -406,7 +383,7 @@ export default function AsyncProgrammingBlog() {
                 services restart
               </ListItem>
             </List>
-          </div>
+          </InfoBox>
         </section>
 
         {/* Message Streams */}
@@ -437,12 +414,8 @@ export default function AsyncProgrammingBlog() {
             Kafka, Kinesis.
           </p>
 
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">
-              When to Use Message Streams:
-            </h4>
-
-            <List className="mb-4 text-blue-800 dark:text-blue-300">
+          <InfoBox variant="info" title="When to Use Message Streams:">
+            <List className="mb-3">
               <ListItem>
                 When you have <strong>real-time data</strong>
               </ListItem>
@@ -455,11 +428,11 @@ export default function AsyncProgrammingBlog() {
               </ListItem>
             </List>
 
-            <p className="mt-3 text-blue-700 dark:text-blue-400 italic">
+            <p className="italic opacity-80">
               Think of it like a <strong>live broadcast</strong> — one source,
               many listeners.
             </p>
-          </div>
+          </InfoBox>
 
           <div className="mb-6">
             <h4 className="font-semibold mb-3 text-zinc-900 dark:text-zinc-200">
@@ -542,18 +515,15 @@ export default function AsyncProgrammingBlog() {
               parallel processing.
             </p>
 
-            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
-              <h5 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">
-                How Kafka Distributes Work:
-              </h5>
-              <p className="text-blue-800 dark:text-blue-300 text-sm">
+            <InfoBox variant="info" title="How Kafka Distributes Work:">
+              <p className="text-sm">
                 If a topic has 3 partitions (P0, P1, P2) and a consumer group
                 has 3 consumers, each consumer gets one partition. If there are
                 fewer consumers than partitions, some consumers handle multiple
                 partitions. This ensures parallel processing while maintaining
                 message order within each partition.
               </p>
-            </div>
+            </InfoBox>
 
             <div className="mb-6">
               <img
@@ -564,12 +534,8 @@ export default function AsyncProgrammingBlog() {
             </div>
           </div>
 
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-6">
-            <h4 className="font-semibold mb-3 text-zinc-900 dark:text-zinc-200">
-              Message Stream Benefits:
-            </h4>
-
-            <List className="mb-4 text-zinc-600 dark:text-zinc-400">
+          <InfoBox title="Message Stream Benefits:">
+            <List className="mb-0">
               <ListItem>
                 <strong>Write once</strong>, used by{" "}
                 <strong>many services</strong>
@@ -588,7 +554,7 @@ export default function AsyncProgrammingBlog() {
                 Built-in <strong>fault tolerance and parallelism</strong>
               </ListItem>
             </List>
-          </div>
+          </InfoBox>
         </section>
 
         {/* Pub/Sub */}
@@ -611,12 +577,8 @@ export default function AsyncProgrammingBlog() {
             collaborative apps — the Publish-Subscribe (Pub/Sub) model shines.
           </p>
 
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-6 mb-6">
-            <h4 className="font-semibold mb-3 text-zinc-900 dark:text-zinc-200">
-              Key Characteristics:
-            </h4>
-
-            <List className="mb-4 text-zinc-600 dark:text-zinc-400">
+          <InfoBox title="Key Characteristics:">
+            <List className="mb-0">
               <ListItem>
                 <strong>Fire-and-forget</strong>: Messages are delivered in
                 real-time but not stored
@@ -634,7 +596,7 @@ export default function AsyncProgrammingBlog() {
                 reliability
               </ListItem>
             </List>
-          </div>
+          </InfoBox>
 
           <div className="mb-6">
             <img
@@ -666,22 +628,18 @@ export default function AsyncProgrammingBlog() {
               </OrderedListItem>
             </OrderedList>
 
-            <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-4">
-              <p className="text-amber-800 dark:text-amber-300 text-sm">
+            <InfoBox variant="warning">
+              <p className="text-sm">
                 <strong>Trade-off:</strong> Unlike Kafka streams, Redis Pub/Sub
                 doesn&apos;t persist messages. If a subscriber is offline when a
                 message is published, they miss it. This makes it perfect for
                 real-time updates where only the latest state matters.
               </p>
-            </div>
+            </InfoBox>
           </div>
 
-          <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg p-6">
-            <h4 className="font-semibold mb-2 text-purple-900 dark:text-purple-200">
-              When to Choose Pub/Sub:
-            </h4>
-
-            <List className="mb-4 text-purple-800 dark:text-purple-300">
+          <InfoBox variant="info" title="When to Choose Pub/Sub:">
+            <List className="mb-3">
               <ListItem>
                 <strong>Ultra-low latency</strong> is critical
               </ListItem>
@@ -693,11 +651,11 @@ export default function AsyncProgrammingBlog() {
                 Real-time notifications, live dashboards, chat systems
               </ListItem>
             </List>
-            <p className="mt-3 text-purple-700 dark:text-purple-400 text-sm">
+            <p className="text-sm opacity-80">
               <strong>Popular tools:</strong> Redis Pub/Sub, Google Cloud
               Pub/Sub, AWS SNS
             </p>
-          </div>
+          </InfoBox>
         </section>
 
         {/* Wrap Up */}
@@ -719,18 +677,15 @@ export default function AsyncProgrammingBlog() {
             Facebook to handle massive flows of data in real time.
           </p>
 
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-6 mb-8">
-            <h3 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">
-              What&apos;s Next?
-            </h3>
-            <p className="text-blue-800 dark:text-blue-300">
+          <InfoBox variant="info" title="What's Next?">
+            <p>
               In the <strong>next blog</strong>, we&apos;ll use these async
               patterns to{" "}
               <strong> design a real-world Notification System</strong> with
               emails, in-app alerts, and retry handling — all using event-driven
               architecture.
             </p>
-          </div>
+          </InfoBox>
 
           <p className="text-xl font-semibold text-center text-zinc-900 dark:text-zinc-200 mb-2">
             Stay Tuned!

@@ -1,5 +1,7 @@
 import AsyncProgrammingBlog from "@/components/blog/async";
 import SessionBasedAuthBlog from "@/components/blog/session-based";
+import ScalableCodeRunnerBlog from "@/components/blog/scalable-code-runner";
+import CodolioJourneyBlog from "@/components/blog/codolio-journey";
 import { JSX } from "react";
 
 export interface TypeBlog {
@@ -19,6 +21,21 @@ export interface TypeBlog {
 
 export const metadata: TypeBlog[] = [
   {
+    title: "From System Freeze to 250ms: How I Engineered a Scalable Remote Code Runner",
+    description:
+      "The story of how I crashed my own server, successfully engineered my way out of it, and cut execution time from 2.5 seconds to 250ms.",
+    date: "28/12/2025",
+    slug: "scalable-code-runner",
+    url: "/blog/scalable-code-runner",
+    tags: ["system-design", "golang", "docker", "redis", "engineering"],
+    author: "Anurag Srivastav",
+    banner: {
+      src: "/blogs/scalable-code-runner.png",
+      alt: "Scalable Code Runner Banner",
+    },
+    component: ScalableCodeRunnerBlog,
+  },
+  {
     title: "Auth Beyond Tokens: Implementing Session Lifecycle",
     description:
       "A practical guide to session-based authentication using Go and Redis.",
@@ -35,7 +52,7 @@ export const metadata: TypeBlog[] = [
   },
   {
     title: "Event Driven Architecture 101: Guide to Async Programming ",
-    description: "Event Driven Architecture",
+    description: "A Guide to understanding Event Driven Architecture",
     date: "05/08/2025",
     slug: "event-driven-architecture",
     url: "/blog/event-driven-architecture",
@@ -46,6 +63,21 @@ export const metadata: TypeBlog[] = [
       alt: "Event-Driven Architecture Banner",
     },
     component: AsyncProgrammingBlog,
+  },
+  {
+    title: "My Journey at Codolio: From Intern to Founding Engineer",
+    description:
+      "How a 2-month frontend internship turned into 1.5 years of architecting backend systems, managing deployments, and surviving production all-nighters.",
+    date: "10/06/2025",
+    slug: "codolio-journey",
+    url: "/blog/codolio-journey",
+    tags: ["career", "engineering", "startup", "growth"],
+    author: "Anurag Srivastav",
+    banner: {
+      src: "/blogs/codolio-journey.png",
+      alt: "Codolio Journey",
+    },
+    component: CodolioJourneyBlog,
   },
   {
     title: "Setup Express Server",

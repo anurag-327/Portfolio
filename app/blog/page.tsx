@@ -1,4 +1,8 @@
 import { metadata } from "@/meta-data/metadata";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+
+export const revalidate = 60;
 
 export default function BlogListPage() {
   const postsByYear = metadata.reduce(
@@ -16,44 +20,49 @@ export default function BlogListPage() {
   );
 
   return (
-    <div className="w-full mt-28 mb-16">
-      <div className="min-h-[86vh] flex flex-col">
-        {sortedYears.map((year) => (
-          <div key={year}>
-            <div className="px-5 py-8 font-mono dark:text-blue-100 text-zinc-600">
-              <span>{year}</span>
-            </div>
-            <ul>
-              {postsByYear[year].map((post) => (
-                <li
-                  key={post.slug}
-                  className="relative border-b dark:border-zinc-800 group"
-                >
-                  <a
-                    href={post.url}
-                    target={post.url.startsWith("/") ? "_self" : "_blank"}
-                    className="flex w-full p-5 gap-4 justify-between items-center text-sm flex-1 font-medium text-zinc-600 dark:text-zinc-400 tracking-wide transition-all duration-300 ease-in-out group-hover:text-blue-600 dark:group-hover:text-blue-300"
-                  >
-                    <div className="flex-1">
-                      <span className="whitespace-pre-wrap">{post.title}</span>
-                    </div>
-                    <time className="font-mono whitespace-nowrap">
-                      {formatDate(post.date)}
-                    </time>
-                  </a>
+    <div className="max-w-2xl mx-auto mt-16 mb-24 px-6">
+      <header className="mb-16">
+        <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-4">
+          Writing
+        </h1>
+        <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+          Thoughts on software engineering, distributed systems, and building products.
+        </p>
+      </header>
 
-                  {post.banner && (
-                    <div className="absolute -top-24 right-4 ml-4 w-44 h-30 overflow-hidden rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <img
-                        src={post.banner.src}
-                        alt={post.banner.alt}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  )}
-                </li>
+      <div className="flex flex-col gap-12">
+        {sortedYears.map((year) => (
+          <div key={year} className="relative">
+            <h2 className="text-2xl font-bold text-zinc-900 dark:text-zinc-100 mb-6 border-b border-zinc-200 dark:border-zinc-800 pb-2">
+              {year}
+            </h2>
+            <div className="flex flex-col gap-8">
+              {postsByYear[year].map((post) => (
+                <Link
+                  key={post.slug}
+                  href={post.url}
+                  target={post.url.startsWith("/") ? "_self" : "_blank"}
+                  className="group flex flex-col w-full -mx-4 p-4 rounded-xl hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors"
+                >
+                  <div className="flex items-center justify-between w-full mb-2">
+                    <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      {post.title}
+                    </h3>
+                    {!post.url.startsWith("/") && (
+                      <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-zinc-600 dark:text-zinc-500 dark:group-hover:text-zinc-300 transition-transform group-hover:rotate-45" />
+                    )}
+                  </div>
+
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 mb-2">
+                    {post.description}
+                  </p>
+
+                  <time className="text-xs font-medium text-zinc-400 dark:text-zinc-500 font-mono">
+                    {formatDate(post.date)}
+                  </time>
+                </Link>
               ))}
-            </ul>
+            </div>
           </div>
         ))}
       </div>

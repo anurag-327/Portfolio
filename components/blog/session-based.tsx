@@ -7,12 +7,13 @@ import {
   OrderedList,
   OrderedListItem,
 } from "./component";
+import InfoBox from "./InfoBox";
 import SessionJWTComparison from "../playground/sessionvsjwt";
 
 export default function SessionBasedAuthBlog() {
   return (
-    <div className="min-h-screen text-zinc-900 dark:text-zinc-100">
-      <div className="max-w-4xl mx-auto p-0 md:p-6">
+    <div>
+      <div className="">
         {/* Hero Section */}
         <div className="mb-12">
           <p className="text-zinc-600 dark:text-zinc-400 mb-4">
@@ -58,17 +59,14 @@ export default function SessionBasedAuthBlog() {
             You have two main choices to solve this:
           </p>
 
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 md:p-6 mb-6">
-            <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-zinc-200">
-              Option 1: Sessions (Server-Side Memory)
-            </h3>
-            <p className="text-zinc-600 dark:text-zinc-400 mb-3">
+          <InfoBox title="Option 1: Sessions (Server-Side Memory)">
+            <p className="mb-3">
               The server keeps track of who&apos;s logged in. When you log in,
               the server creates a session and gives your browser a small token
               (usually in a cookie). On your next request, your browser sends
               this token back, and the server looks it up to remember you.
             </p>
-            <List className="text-zinc-600 dark:text-zinc-400 mb-3">
+            <List>
               <ListItem>
                 <strong>Best for:</strong> Traditional web apps, when you need
                 instant control (logout immediately), per-device tracking, or
@@ -79,19 +77,16 @@ export default function SessionBasedAuthBlog() {
                 which uses memory/database space.
               </ListItem>
             </List>
-          </div>
+          </InfoBox>
 
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 md:p-6 mb-6">
-            <h3 className="text-lg font-semibold mb-4 text-zinc-900 dark:text-zinc-200">
-              Option 2: Stateless Tokens (JWT)
-            </h3>
-            <p className="text-zinc-600 dark:text-zinc-400 mb-3">
+          <InfoBox title="Option 2: Stateless Tokens (JWT)">
+            <p className="mb-3">
               The server doesn&apos;t store anything. Instead, it creates a
               signed token that contains your user information, and you send
               this token with every request. The server verifies the
               token&apos;s signature to ensure it&apos;s real.
             </p>
-            <List className="text-zinc-600 dark:text-zinc-400 mb-3">
+            <List>
               <ListItem>
                 <strong>Best for:</strong> Mobile apps, microservices, or
                 distributed systems where you don&apos;t want a central storage
@@ -103,13 +98,10 @@ export default function SessionBasedAuthBlog() {
                 naturally.
               </ListItem>
             </List>
-          </div>
+          </InfoBox>
 
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 md:p-6 mb-6">
-            <h4 className="font-semibold mb-3 text-blue-900 dark:text-blue-200">
-              Why We&apos;re Using Sessions in This Tutorial
-            </h4>
-            <p className="text-blue-700 dark:text-blue-400">
+          <InfoBox variant="info" title="Why We're Using Sessions in This Tutorial">
+            <p>
               We&apos;re building a traditional web application where the server
               controls everything. Sessions give us instant logout (crucial if
               someone&apos;s account is compromised), per-device tracking (know
@@ -117,7 +109,7 @@ export default function SessionBasedAuthBlog() {
               enforce rules like &quot;max 5 active sessions per user.&quot; If
               your app needs these guarantees, sessions are the way to go.
             </p>
-          </div>
+          </InfoBox>
 
           <h3 className="text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-200">
             Real-World Example
@@ -137,11 +129,8 @@ export default function SessionBasedAuthBlog() {
 
         {/* Prerequisites */}
         <section className="mb-12">
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 md:p-6">
-            <h4 className="font-semibold mb-3 text-zinc-900 dark:text-zinc-200">
-              Prerequisites:
-            </h4>
-            <List className="mb-4">
+          <InfoBox title="Prerequisites:">
+            <List className="mb-0">
               <ListItem>
                 <strong>Go 1.21+</strong> installed on your machine
               </ListItem>
@@ -160,7 +149,7 @@ export default function SessionBasedAuthBlog() {
                 Familiarity with <strong>Go syntax</strong>
               </ListItem>
             </List>
-          </div>
+          </InfoBox>
         </section>
 
         {/* What You&apos;ll Build */}
@@ -174,7 +163,7 @@ export default function SessionBasedAuthBlog() {
             session-based auth system that can:
           </p>
 
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 md:p-6">
+          <InfoBox className="mb-6">
             <List>
               <ListItem>Log in users and manage their sessions</ListItem>
               <ListItem>
@@ -187,7 +176,7 @@ export default function SessionBasedAuthBlog() {
               </ListItem>
               <ListItem>Handle logout and automatic session cleanup</ListItem>
             </List>
-          </div>
+          </InfoBox>
         </section>
 
         {/* What is Session-Based Auth */}
@@ -231,9 +220,9 @@ export default function SessionBasedAuthBlog() {
             </ListItem>
           </List>
 
-          <div className="bg-blue-50 dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-lg mb-6">
+          <InfoBox variant="info" className="mb-6">
             <SessionJWTComparison />
-          </div>
+          </InfoBox>
 
           <h3 className="text-xl font-semibold mb-4 text-zinc-900 dark:text-zinc-200">
             How It Works: Step-by-Step
@@ -444,11 +433,8 @@ export default function SessionBasedAuthBlog() {
             </p>
           </div>
 
-          <div className="bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg p-4 md:p-6 mb-6">
-            <h4 className="font-semibold mb-3 text-zinc-900 dark:text-zinc-200">
-              All Three Together
-            </h4>
-            <p className="text-zinc-600 dark:text-zinc-400 mb-3">
+          <InfoBox title="All Three Together">
+            <p className="mb-3">
               In our code, we set:
             </p>
             <Code>{`http.SetCookie(c.Writer, &http.Cookie{
@@ -456,13 +442,13 @@ export default function SessionBasedAuthBlog() {
   Secure: true,                // Only sent over HTTPS (prevents WiFi interception)
   SameSite: http.SameSiteStrictMode,  // Only sent to our site (prevents CSRF)
 })`}</Code>
-            <p className="text-zinc-600 dark:text-zinc-400 mt-3">
+            <p className="mt-3">
               This creates a cookie that&apos;s highly resistant to theft. An
               attacker would need to either compromise HTTPS, trick you into
               visiting a malicious site, or directly access your browser&apos;s
               storage — all very difficult.
             </p>
-          </div>
+          </InfoBox>
         </section>
 
         {/* Setup Section */}
@@ -502,14 +488,11 @@ export default function SessionBasedAuthBlog() {
 
         {/* Coming Up */}
         <section className="mb-12">
-          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4 md:p-6">
-            <h3 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">
-              What&apos;s Next?
-            </h3>
-            <p className="text-blue-800 dark:text-blue-300 mb-4">
+          <InfoBox variant="info" title="What's Next?">
+            <p className="mb-4">
               In the next sections, we&apos;ll dive into the code and build:
             </p>
-            <OrderedList className="text-blue-800 dark:text-blue-300">
+            <OrderedList>
               <OrderedListItem>
                 <strong>Login handler</strong> that creates sessions
               </OrderedListItem>
@@ -524,7 +507,7 @@ export default function SessionBasedAuthBlog() {
                 <strong>Logout functionality</strong>
               </OrderedListItem>
             </OrderedList>
-          </div>
+          </InfoBox>
         </section>
 
         {/* Login Handler Section */}

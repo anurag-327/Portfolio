@@ -23,12 +23,11 @@ export default function TopBlogs() {
         </h2>
       </div>
       <ul>
-        {metadata.slice(0, 2).map((post, index) => (
+        {metadata.slice(0, 3).map((post, index) => (
           <li
             key={post.slug}
-            className={`relative ${
-              index != 1 && "border-b"
-            } dark:border-zinc-800 group`}
+            className={`relative ${index != 1 && "border-b"
+              } dark:border-zinc-800 group`}
           >
             <a
               href={post.url}

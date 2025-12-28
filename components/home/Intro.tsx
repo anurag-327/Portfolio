@@ -3,19 +3,12 @@ import Link from "next/link";
 export default function Intro() {
   return (
     <section className="mt-8 text-zinc-600 dark:text-zinc-400">
-      <div className="space-y-5 text-left leading-snug">
-        <p>
-          Hi, I&apos;m Anurag — a backend-focused Full-Stack developer and
-          Founding Engineer at{" "}
-          <Link
-            href="https://www.codolio.dev/"
-            target="_blank"
-            className=" hover:text-blue-500"
-          >
-            Codolio
-          </Link>
-          .
+      <div className="space-y-5 text-left  leading-snug">
+        <p className="font-semibold">
+          Hi, I&apos;m Anurag. I build distributed systems that scale.
         </p>
+
+
 
         <div>
           I enjoy building fast, scalable systems with Go, Node.js, Redis, and
@@ -47,6 +40,6 @@ export default function Intro() {
           .
         </p>
       </div>
-    </section>
+    </section >
   );
 }

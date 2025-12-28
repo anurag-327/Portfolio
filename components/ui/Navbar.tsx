@@ -19,8 +19,8 @@ const spaceGrotesk = Space_Grotesk({
 const navItems: NavItem[] = [
   { name: "Home", href: "/" },
   { name: "Blogs", href: "/blog" },
-  { name: "Project", href: "https://anuragsri327.vercel.app/projects" },
-  { name: "About", href: "https://anuragsri327.vercel.app/about" },
+  { name: "Projects", href: "/projects" },
+  { name: "About", href: "/about" },
 ];
 
 export default function Header() {
@@ -33,15 +33,12 @@ export default function Header() {
           key={name}
           href={href}
           target={href.startsWith("/") ? "_self" : "_blank"}
-          className={`${
-            spaceGrotesk.className
-          } text-sm py-3 transition-all font-medium hover:opacity-80 ${
-            !href.startsWith("/") ? "hidden md:inline-block" : ""
-          } ${
-            pathname === href
+          className={`${spaceGrotesk.className
+            } text-sm py-3 transition-all font-medium hover:opacity-80 ${!href.startsWith("/") ? "hidden md:inline-block" : ""
+            } ${pathname === href
               ? "text-zinc-900 dark:text-zinc-50 "
               : "text-zinc-700 dark:text-zinc-200"
-          }`}
+            }`}
         >
           {name}
         </Link>
