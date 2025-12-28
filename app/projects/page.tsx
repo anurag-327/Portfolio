@@ -13,7 +13,7 @@ export default function ProjectsPage() {
     const moreProjects = projects.slice(6);
 
     return (
-        <section className="max-w-4xl mx-auto mt-16 mb-20 px-6">
+        <section className="max-w-4xl mx-auto mt-16 mb-20 md:px-6">
             <header className="mb-14">
                 <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-4">
                     Projects
