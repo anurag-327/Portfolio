@@ -36,9 +36,9 @@ export const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 pb-8 px-4 md:px-0 text-zinc-600 dark:text-zinc-400">
+    <footer className="mt-8 pb-8 px-4 md:px-0 text-zinc-600 dark:text-zinc-400">
       <div className="border-t border-zinc-200 dark:border-zinc-800 pt-8 flex flex-col md:flex-row justify-between gap-10 md:gap-0">
-        <div className="space-y-2.5 max-w-xs">
+        <div className="space-y2.5 max-w-xs">
           <h3 className="font-semibold text-base text-zinc-900 dark:text-zinc-100">
             Anurag Srivastav
           </h3>

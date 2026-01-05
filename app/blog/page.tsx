@@ -1,6 +1,6 @@
 import { metadata } from "@/meta-data/metadata";
 import Link from "next/link";
-import { Clock } from "lucide-react";
+import { Clock, ArrowLeft } from "lucide-react";
 
 export const revalidate = 60;
 
@@ -20,10 +20,22 @@ export default function BlogListPage() {
   );
 
   return (
-    <div className="max-w-2xl mx-auto mt-16 mb-24 md:px-0">
+    <div className="max-w-3xl mx-auto px-6 mt-16 mb-24">
+      <div className="mb-12">
+        <Link
+          href="/"
+          className="group inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-300 transition-colors"
+        >
+          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+          Back to Home
+        </Link>
+      </div>
       <header className="mb-16">
-        <h1 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-4">
-          Writing
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 text-zinc-900 dark:text-white">
+          Writing <br />
+          <span className="text-zinc-500 dark:text-zinc-400">
+            & Thoughts.
+          </span>
         </h1>
         <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
           Thoughts on software engineering, distributed systems, and building

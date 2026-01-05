@@ -1,7 +1,8 @@
+
 import React from "react";
 import { projects, currentProjects } from "./data";
 import Link from "next/link";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ArrowUpRight, ArrowLeft } from "lucide-react";
 
 export const metadata = {
     title: "Projects | Anurag Srivastav",
@@ -9,14 +10,23 @@ export const metadata = {
 };
 
 export default function ProjectsPage() {
-    const topProjects = projects.slice(0, 6);
-    const moreProjects = projects.slice(6);
-
     return (
-        <section className="max-w-4xl mx-auto mt-16 mb-20 md:px-6">
-            <header className="mb-14">
-                <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-4">
-                    Projects
+        <section className="max-w-3xl mx-auto md:px-6 mt-16 pb-20">
+            <div className="mb-12">
+                <Link
+                    href="/"
+                    className="group inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-300 transition-colors"
+                >
+                    <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
+                    Back to Home
+                </Link>
+            </div>
+            <header className="mb-20">
+                <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 text-zinc-900 dark:text-white">
+                    Things <br />
+                    <span className="text-zinc-500 dark:text-zinc-400">
+                        I&apos;ve built.
+                    </span>
                 </h1>
                 <p className="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl leading-relaxed">
                     I love building things. Here are some of the projects I&apos;ve worked
@@ -25,220 +35,144 @@ export default function ProjectsPage() {
                 </p>
             </header>
 
-            {currentProjects.length > 0 && (
-                <div className="mb-20">
-                    <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-6 flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-                        Current Focus
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {currentProjects.map((project, index) => (
-                            <div
-                                key={index}
-                                className="group relative block p-px rounded-xl bg-gradient-to-b from-zinc-200 to-transparent dark:from-zinc-800 dark:to-transparent overflow-hidden"
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                <div className="relative h-full bg-white dark:bg-zinc-900 p-6 rounded-[11px] transition-transform duration-300 group-hover:-translate-y-1">
-                                    <div className="flex items-center justify-between mb-4">
-                                        <div className="flex items-center gap-3">
-                                            {project.logo ? (
-                                                <div className="w-10 h-10 rounded-lg overflow-hidden bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center p-1">
-                                                    <img
-                                                        src={project.logo}
-                                                        alt={project.name}
-                                                        className="w-full h-full object-contain"
-                                                    />
-                                                </div>
-                                            ) : (
-                                                <div className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-lg">
-                                                    {project.name.charAt(0)}
-                                                </div>
-                                            )}
-
-                                            <h3 className="font-semibold text-zinc-900 dark:text-zinc-100">
-                                                {project.name}
-                                            </h3>
-                                        </div>
-
-                                        <div className="flex gap-2">
-                                            {project.code && (
-                                                <Link
-                                                    href={project.code}
-                                                    target="_blank"
-                                                    className="p-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-full transition-all"
-                                                    aria-label="Source Code"
-                                                >
-                                                    <Github size={18} />
-                                                </Link>
-                                            )}
-                                            {project.link && (
-                                                <Link
-                                                    href={project.link}
-                                                    target="_blank"
-                                                    className="p-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-full transition-all"
-                                                    aria-label="Live Demo"
-                                                >
-                                                    <ExternalLink size={18} />
-                                                </Link>
-                                            )}
-                                        </div>
-                                    </div>
-                                    <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-6">
-                                        {project.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
-
-            <div>
-                <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 mb-8">
-                    All Projects
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
-                    {topProjects.map((project) => (
-                        <div
-                            key={project.id}
-                            className="group relative flex flex-col h-full bg-zinc-50/50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 rounded-xl overflow-hidden transition-all duration-300 hover:border-zinc-300 dark:hover:border-zinc-700 hover:shadow-lg hover:shadow-zinc-200/50 dark:hover:shadow-black/20"
-                        >
-                            <div className="p-6 flex flex-col h-full">
-                                <div className="flex items-start justify-between mb-4">
-                                    <div className="w-12 h-12 rounded-lg bg-white dark:bg-zinc-800 border border-zinc-100 dark:border-zinc-700 flex items-center justify-center shadow-sm overflow-hidden relative">
-                                        {project.logo ? (
-                                            <img
-                                                src={project.logo}
-                                                alt={project.name}
-                                                className="w-full h-full object-cover p-1"
-                                            />
-                                        ) : (
-                                            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-indigo-600">
-                                                {project.name.charAt(0)}
-                                            </span>
-                                        )}
-                                    </div>
-                                    <div className="flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-x-2 group-hover:translate-x-0">
-                                        {project.code && (
-                                            <Link
-                                                href={project.code}
-                                                target="_blank"
-                                                className="p-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-full transition-all"
-                                                aria-label="Source Code"
-                                            >
-                                                <Github size={18} />
-                                            </Link>
-                                        )}
-                                        {project.link && (
-                                            <Link
-                                                href={project.link}
-                                                target="_blank"
-                                                className="p-2 text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-full transition-all"
-                                                aria-label="Live Demo"
-                                            >
-                                                <ExternalLink size={18} />
-                                            </Link>
-                                        )}
-                                    </div>
-                                </div>
-
-                                <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                                    {project.name}
-                                </h3>
-
-                                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6 flex-grow">
-                                    {project.description}
-                                </p>
-
-                                <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800/50 mt-auto">
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.toolsused &&
-                                            project.toolsused
-                                                .split(",")
-                                                .slice(0, 3)
-                                                .map((tech, i) => (
-                                                    <span
-                                                        key={i}
-                                                        className="text-[10px] uppercase font-semibold tracking-wider text-zinc-500 dark:text-zinc-500"
-                                                    >
-                                                        {tech.trim()}
-                                                    </span>
-                                                ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {moreProjects.length > 0 && (
-                    <div>
-                        <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
-                            More Projects
-                        </h3>
-                        <p className="text-zinc-600 dark:text-zinc-400 mb-6 text-sm leading-relaxed">
-                            A trip down memory lane. Built years ago—some repos are lost, others are gathering dust, but they were all part of the journey.
-                        </p>
-                        <div className="flex flex-col gap-4">
-                            {moreProjects.map((project) => (
-                                <div
-                                    key={project.id}
-                                    className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-100 dark:border-zinc-800 rounded-lg group transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800"
-                                >
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-20 rounded-md bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center overflow-hidden">
-                                            {/* Simplified logo for list view */}
-                                            {project.logo ? (
-                                                <img
-                                                    src={project.logo}
-                                                    alt={project.name}
-                                                    className="w-full h-full object-contain p-1"
-                                                />
-                                            ) : (
-                                                <span className="font-bold text-zinc-400 dark:text-zinc-500">
-                                                    {project.name.charAt(0)}
-                                                </span>
-                                            )}
-                                        </div>
-                                        <div>
-                                            <h4 className="font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                                                {project.name}
-                                            </h4>
-                                            <p className="text-xs mt-1 text-zinc-500 dark:text-zinc-500 line-clamp-1">
-                                                {project.description}
-                                            </p>
-
-                                        </div>
-                                    </div>
-
-                                    <div className="flex gap-3">
-                                        {project.code && (
-                                            <Link
-                                                href={project.code}
-                                                target="_blank"
-                                                className="text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
-                                                aria-label="Source Code"
-                                            >
-                                                <Github size={16} />
-                                            </Link>
-                                        )}
-                                        {project.link && (
-                                            <Link
-                                                href={project.link}
-                                                target="_blank"
-                                                className="text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors"
-                                                aria-label="Live Demo"
-                                            >
-                                                <ExternalLink size={16} />
-                                            </Link>
-                                        )}
-                                    </div>
-                                </div>
+            <div className="space-y-24">
+                {/* Current Focus Section */}
+                {currentProjects.length > 0 && (
+                    <section>
+                        <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-8">
+                            Current Focus
+                        </h2>
+                        <div className="flex flex-col">
+                            {currentProjects.map((project, index) => (
+                                <ProjectListItem
+                                    key={`current-${index}`}
+                                    project={project}
+                                    isLast={index === currentProjects.length - 1}
+                                />
                             ))}
                         </div>
-                    </div>
+                    </section>
                 )}
+
+                {/* Top Projects Section */}
+                <section>
+                    <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-8">
+                        Projects
+                    </h2>
+                    <div className="flex flex-col">
+                        {projects.slice(0, 4).map((project, index) => (
+                            <ProjectListItem
+                                key={`top-${project.id}`}
+                                project={project}
+                                isLast={index === 3}
+                            />
+                        ))}
+                    </div>
+                </section>
+
+                {/* Other Projects Section */}
+                <section>
+                    <div className="mb-8">
+                        <h2 className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-4">
+                            Other Projects
+                        </h2>
+                        <p className="text-zinc-500 dark:text-zinc-400 text-sm max-w-2xl leading-relaxed">
+                            Built at the start of my journey. Full of bugs, security concerns, and spaghetti code. I honestly don&apos;t even remember where they are hosted anymore—so I can&apos;t take them down even if I wanted to.
+                        </p>
+                    </div>
+                    <div className="flex flex-col">
+                        {projects.slice(4).map((project, index) => (
+                            <ProjectListItem
+                                key={`other-${project.id}`}
+                                project={project}
+                                isLast={index === projects.length - 5}
+                            />
+                        ))}
+                    </div>
+                </section>
             </div>
         </section>
     );
 }
+
+interface Project {
+    id: number;
+    name: string;
+    description: string;
+    stack?: string;
+    toolsused?: string;
+    link?: string;
+    url?: string;
+    code?: string;
+    logo?: string | null;
+}
+
+function ProjectListItem({ project, isLast }: { project: Project, isLast: boolean }) {
+    const mainLink = project.link || project.url || project.code;
+    const demoLink = project.link || project.url;
+
+    return (
+        <div className={`group block py-8 ${!isLast ? "border-b border-zinc-100 dark:border-zinc-800" : ""}`}>
+            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-3">
+                        {/* Show tools if available, this covers the stack usually */}
+                        {project.toolsused ? (
+                            <div className="flex flex-wrap gap-2">
+                                {project.toolsused.split(',').map((tool, i) => (
+                                    <span key={i} className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 text-[10px] font-bold uppercase tracking-wider">
+                                        {tool.trim()}
+                                    </span>
+                                ))}
+                            </div>
+                        ) : (
+                            // Fallback to stack if toolsused is missing
+                            project.stack && (
+                                <span className="px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-300 text-[10px] font-bold uppercase tracking-wider">
+                                    {project.stack}
+                                </span>
+                            )
+                        )}
+                    </div>
+
+                    <h3 className="font-bold text-xl text-zinc-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-3 flex items-center gap-2">
+                        {project.name}
+                        {mainLink && (
+                            <Link href={mainLink as string} target="_blank" className="opacity-0 group-hover:opacity-100 transition-opacity text-zinc-400 hover:text-blue-500">
+                                <ArrowUpRight size={18} />
+                            </Link>
+                        )}
+                    </h3>
+
+                    <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl mb-4">
+                        {project.description}
+                    </p>
+
+                    <div className="flex items-center gap-4">
+                        {project.code && (
+                            <Link
+                                href={project.code}
+                                target="_blank"
+                                className="flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors"
+                            >
+                                <Github size={14} />
+                                <span>Code</span>
+                            </Link>
+                        )}
+                        {demoLink && (
+                            <Link
+                                href={demoLink as string}
+                                target="_blank"
+                                className="flex items-center gap-1.5 text-sm font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors"
+                            >
+                                <ExternalLink size={14} />
+                                <span>Demo</span>
+                            </Link>
+                        )}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+

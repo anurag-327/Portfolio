@@ -3,6 +3,7 @@ import Intro from "@/components/home/Intro";
 import TechStack from "@/components/home/TechStack";
 import TopBlogs from "@/components/home/TopBlogs";
 import SelectedProjects from "@/components/home/SelectedProjects";
+import Experience from "@/components/home/Experience";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         <Avatar />
       </div>
       <Intro />
+      <Experience />
       <TechStack />
       <SelectedProjects />
       <TopBlogs />
